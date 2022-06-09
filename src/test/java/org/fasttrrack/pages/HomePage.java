@@ -13,8 +13,28 @@ public class HomePage extends PageObject {
     private WebElementFacade searchTop;
     @FindBy (css = ".search-form .fa-search")
     private WebElementFacade clickSearchTop;
+    @FindBy (id = "menu-item-70")
+    private WebElementFacade myAccount;
+    @FindBy (id = "menu-item-71")
+    private WebElementFacade checkOut;
+    @FindBy (id = "menu-item-72")
+    private WebElementFacade cart;
+    @FindBy (id =  "menu-item-73")
+    private WebElementFacade shop;
 
+    public void clickOnCheckout(){
+        clickOn(checkOut);
+    }
+    public void clickOnCart(){
+        clickOn(cart);
+    }
+    public void clickOnShop(){
+        clickOn(shop);
+    }
+    public void clickOnMyAccount(){
+        clickOn(myAccount);
 
+    }
     public void clickOnSearchFromTop(){
         clickOn(clickSearchTop);
     }
