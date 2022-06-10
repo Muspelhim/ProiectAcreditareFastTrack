@@ -16,7 +16,7 @@ public class ProductPage extends PageObject {
 
     public void productAddedToCartMessage(){
         String product =productTitle.getTextContent();
-        productAddMessage.shouldContainOnlyText("“"+product+"” has been added to your cart.");
+        productAddMessage.shouldContainText("“"+product+"” has been added to your cart.");
     }
 
     public void clickOnAddToCartFromProduct(){
