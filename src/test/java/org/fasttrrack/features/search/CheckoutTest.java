@@ -8,4 +8,13 @@ public class CheckoutTest extends BaseTest{
         homePageSteps.openHomePage();
         checkoutSteps.verifyCheckoutPageWithNoProducts();
     }
+    @Test
+    public void checkoutNotLoggedIn(){
+        checkoutSteps.proceedToCheckoutNotLoggedIn();
+        checkoutSteps.doCheckOutNotLoggedIn();
+    }
+    @Test
+    public void checkoutLoggedIn(){
+        checkoutSteps.doCheckOutLoggedIn();
+    }
 }

@@ -10,18 +10,12 @@ public class ProductPage extends PageObject {
     private WebElementFacade addToCartFromProduct;
     @FindBy (css = "h1.product_title")
     private WebElementFacade productTitle;
-    @FindBy (css = ".woocommerce-message")
+    @FindBy (css = ".woocommerce-message:not(a)")
     private WebElementFacade productAddMessage;
-
-//
-//    public void productName(){
-//        productTitle.getText();
-//    }
-
 
 
     public void productAddedToCartMessage(){
-        String product =productTitle.getText();
+        String product =productTitle.getTextContent();
         productAddMessage.shouldContainOnlyText("“"+product+"” has been added to your cart.");
     }
 

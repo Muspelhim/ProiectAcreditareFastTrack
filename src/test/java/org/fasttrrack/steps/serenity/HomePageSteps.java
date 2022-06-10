@@ -11,4 +11,25 @@ public class HomePageSteps extends ScenarioSteps {
     public void openHomePage(){
         homePage.open();
     }
+    @Step
+    public void clickOnMyAccount(){
+        homePage.clickOnMyAccount();
+    }
+    @Step
+    public void clickOnCheckout(){
+        homePage.clickOnCheckout();
+
+    }
+    @Step
+    public void clickOnCart(){
+        homePage.clickOnCart();
+    }
+    @Step
+    public void clickOnShop(){
+        homePage.clickOnShop();
+    }
+    @Step
+    public void clickOnLoggIn(){
+        homePage.clickLoggIN();
+    }
 }

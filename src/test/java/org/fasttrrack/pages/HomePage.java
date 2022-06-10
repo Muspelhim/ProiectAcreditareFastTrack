@@ -21,7 +21,12 @@ public class HomePage extends PageObject {
     private WebElementFacade cart;
     @FindBy (id =  "menu-item-73")
     private WebElementFacade shop;
+    @FindBy (css = ".account")
+    private WebElementFacade loggIn;
 
+    public void clickLoggIN(){
+        clickOn(loggIn);
+    }
     public void clickOnCheckout(){
         clickOn(checkOut);
     }
