@@ -1,6 +1,5 @@
 package org.fasttrrack.features.search;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 public class ShopTest extends BaseTest{
@@ -11,7 +10,7 @@ public class ShopTest extends BaseTest{
     @Test
     public void selectFirstProductFromShop(){
         shopSteps.navigateToShopPage();
-        shopSteps.orderProducts();
+        shopSteps.selectHighToLow();
         shopSteps.clickOnFirstProduct();
     }
 
@@ -19,5 +18,13 @@ public class ShopTest extends BaseTest{
     public void addToCartFirstProduct(){
         productSteps.addToCartProductFromProductPage();
         productSteps.verifyIfProductAddedToCart();
+    }
+    @Test
+    public void verifyIfQuantityChange(){
+        shopSteps.navigateToShopPage();
+        shopSteps.selectNewness();
+        shopSteps.clickOnFirstProduct();
+        productSteps.changeQuantityProduct();
+
     }
 }

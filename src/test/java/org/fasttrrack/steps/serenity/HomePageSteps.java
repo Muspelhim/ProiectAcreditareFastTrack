@@ -8,6 +8,37 @@ public class HomePageSteps extends ScenarioSteps {
     private HomePage homePage;
 
     @Step
+    public void goToMyAccount(){
+        homePage.openMyAccount();
+    }
+    @Step
+    public void goToCheckout(){
+        homePage.openCheckout();
+    }
+    @Step
+    public void goToCart(){
+        homePage.openCart();
+    }
+    @Step
+    public void goToShop(){
+        homePage.openShop();
+    }
+    @Step
+    public void goToSearch(){
+        homePage.openSearch();
+    }
+    @Step
+    public void goToLoggIn(){
+        homePage.openLoggIn();
+    }
+
+
+    @Step
+    public void searchFromTop(String keyword){
+        homePage.searchFromTop(keyword);
+    }
+
+    @Step
     public void openHomePage(){
         homePage.open();
     }
@@ -30,6 +61,6 @@ public class HomePageSteps extends ScenarioSteps {
     }
     @Step
     public void clickOnLoggIn(){
-        homePage.clickLoggIN();
+        homePage.clickOnLoggIN();
     }
 }

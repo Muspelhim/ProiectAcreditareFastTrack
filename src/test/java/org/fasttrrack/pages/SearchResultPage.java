@@ -15,23 +15,24 @@ public class SearchResultPage extends PageObject {
     private List<WebElementFacade> productList;
 
 
-    public boolean checkListForProduct(String productName){
-        for (WebElementFacade element : productList){
-            if (element.findElement(By.cssSelector("h3")).getText().equals(productName));
+    public boolean checkListForProduct(String productName) {
+        for (WebElementFacade element : productList) {
+            if (element.findElement(By.cssSelector("h3")).getText().equalsIgnoreCase(productName)) {
                 return true;
+            }
         }
         return false;
-
     }
 
     public void selectItemFromList(String productName){
-        for (WebElementFacade element : productList){
-            if (element.findElement(By.cssSelector("h3")).getText().equals(productName));
-                element.click();
-//                element.findElement(By.cssSelector("h3")).click();
-                break;
+            for (WebElementFacade element : productList) {
+                if (element.findElement(By.cssSelector("h3")).getText().equalsIgnoreCase(productName)) {
+//                    element.click();
+                element.findElement(By.cssSelector("h3")).click();
+                    break;
+                }
+            }
         }
-    }
 
     public void verifySearchFromTop(String productName){
         verifySearch.shouldContainOnlyText("SEARCH RESULTS: “"+productName+"”");

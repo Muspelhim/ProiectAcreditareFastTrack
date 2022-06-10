@@ -8,4 +8,11 @@ public class CartTest extends  BaseTest{
       cartSteps.verifyEmptyCheckoutMessage();
 
     }
+
+
+    @Test
+    public void verifyCoupon(){
+        cartSteps.verifyIfCouponApplied();
+    }
+
 }

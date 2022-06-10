@@ -19,7 +19,7 @@ public class MyAccountSteps extends ScenarioSteps {
     @Step
     public void doLogIn(String email,String password){
         homePage.open();
-        homePage.clickLoggIN();
+        homePage.clickOnLoggIN();
         myAccountPage.completeEmailField(email);
         myAccountPage.completePasswordField(password);
         myAccountPage.clickLoginButton();

@@ -23,10 +23,12 @@ public class SearchTest extends BaseTest{
 
     }
     @Test
-    public void addToCartLoggedIn(){
+    public void addToCartNotLoggedIn(){
         searchSteps.searchFromTop(product);
         searchSteps.clickOnProduct(product);
-//        searchSteps
+        searchSteps.clickOnProduct(product);
+        productSteps.selectColorAndLogo();
+        productSteps.clickAddToCartFromProduct();
     }
 
 }

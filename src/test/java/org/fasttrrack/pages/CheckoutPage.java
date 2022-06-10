@@ -32,6 +32,7 @@ public class CheckoutPage extends PageObject {
 
 
 
+
     public void checkoutMessageOrder(){
         checkoutMessageOrder.containsOnlyText("ORDER RECEIVED");
     }

@@ -15,14 +15,17 @@ public class ShopSteps extends ScenarioSteps {
         homePage.clickOnShop();
     }
     @Step
-    public void orderProducts(){
-        shopPage.selectHowToOrderProducts();
+    public void selectHighToLow(){
+        shopPage.selectOrderHighToLow();
     }
     @Step
     public void clickOnFirstProduct(){
         shopPage.selectFirstProduct();
     }
-
+    @Step
+    public void selectNewness(){
+        shopPage.selectNewness();
+    }
 
 
     @Step

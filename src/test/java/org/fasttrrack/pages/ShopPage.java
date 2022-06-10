@@ -15,8 +15,10 @@ public class ShopPage extends PageObject {
     public void selectFirstProduct(){
         clickOn(firstProduct);
     }
-
-    public void selectHowToOrderProducts(){
+    public void selectNewness(){
+        selectFromDropdown(orderProductsDropdown,"Sort by newness");
+    }
+    public void selectOrderHighToLow(){
         selectFromDropdown(orderProductsDropdown,"Sort by price: high to low");
     }
 

@@ -11,13 +11,39 @@ public class ProductSteps extends ScenarioSteps {
     private ProductPage productPage;
     private ShopPage shopPage;
 
+
+
+
+
+    @Step
+    public void clickAddToCartFromProduct(){
+        productPage.clickOnAddToCartFromProduct();
+    }
+    @Step
+    public void selectColorAndLogo(){
+        productPage.selectHoodieColor();
+        productPage.selectLogo();
+    }
+//    @Step
+//    public void selectColor(){
+//        productPage.selectHoodieColor();
+//    }
+//    @Step
+//    public void selectLogo(){
+//        productPage.selectLogo();
+//    }
     @Step
     public void addToCartProductFromProductPage() {
         homePage.open();
         homePage.clickOnShop();
-        shopPage.selectHowToOrderProducts();
+        shopPage.selectOrderHighToLow();
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
+    }
+    @Step
+    public void changeQuantityProduct(){
+        productPage.changeQuantity();
+        productPage.verifyChangeQuantity();
     }
     @Step
     public void verifyIfProductAddedToCart(){

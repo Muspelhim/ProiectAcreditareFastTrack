@@ -24,7 +24,28 @@ public class HomePage extends PageObject {
     @FindBy (css = ".account")
     private WebElementFacade loggIn;
 
-    public void clickLoggIN(){
+    public void openLoggIn(){
+        open();
+        clickOnLoggIN();
+    }
+    public void openCheckout(){
+        open();
+        clickOnCheckout();
+    } public void openCart(){
+        open();
+        clickOnCart();
+    } public void openShop(){
+        open();
+        clickOnShop();
+    } public void openMyAccount(){
+        open();
+        clickOnMyAccount();
+    } public void openSearch(){
+        open();
+        clickOnSearchFromTop();
+    }
+
+    public void clickOnLoggIN(){
         clickOn(loggIn);
     }
     public void clickOnCheckout(){

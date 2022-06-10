@@ -92,11 +92,13 @@ public class CheckoutSteps extends ScenarioSteps {
     public void verifyCheckOutMessage(){
         checkoutPage.checkoutMessageOrder();
     }
+
+
     @Step
     public void proceedToCheckoutNotLoggedIn(){
         homePage.open();
         homePage.clickOnShop();
-        shopPage.selectHowToOrderProducts();
+        shopPage.selectOrderHighToLow();
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
@@ -105,10 +107,10 @@ public class CheckoutSteps extends ScenarioSteps {
     @Step
     public void doCheckOutLoggedIn(){
         homePage.open();
-        homePage.clickLoggIN();
+        homePage.clickOnLoggIN();
         myAccountPage.doLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
         homePage.clickOnShop();
-        shopPage.selectHowToOrderProducts();
+        shopPage.selectOrderHighToLow();
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
