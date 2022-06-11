@@ -28,11 +28,26 @@ public class CheckoutPage extends PageObject {
     private WebElementFacade placeOrder;
     @FindBy (css = ".post-title")
     private WebElementFacade checkoutMessageOrder;
+    @FindBy (css = ".cart-subtotal .amount")
+    private WebElementFacade subtotalPrice;
+    @FindBy (css = ".woocommerce-remove-coupon")
+    private WebElementFacade removeCouponButton;
+    @FindBy (css = ".woocommerce-message")
+    private WebElementFacade couponRemoveMessage;
 
 
 
 
+    public void getSubtotalPrice(){
+        String price=subtotalPrice.getText();
 
+    }
+    public void clickOnRemoveCouponButton(){
+        clickOn(removeCouponButton);
+    }
+    public void verifyCouponRemoveMessage(){
+        couponRemoveMessage.shouldContainText("Coupon has been removed.");
+    }
     public void checkoutMessageOrder(){
         checkoutMessageOrder.containsOnlyText("ORDER RECEIVED");
     }

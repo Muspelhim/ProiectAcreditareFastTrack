@@ -18,9 +18,9 @@ public class ProductPage extends PageObject {
     private WebElementFacade productMessage;
     @FindBy (css = ".screen-reader-text")
     private WebElementFacade quantityProduct;
-    @FindBy (css = "select#pa_color")
+    @FindBy (css = "#pa_color")
     private WebElementFacade hoodieColorDropdown;
-    @FindBy (css = "select#logo")
+    @FindBy (css = "#logo")
     private WebElementFacade hoodieLogoDropdown;
 
 
@@ -29,7 +29,8 @@ public class ProductPage extends PageObject {
         selectFromDropdown(hoodieColorDropdown,"Green");
     }
     public void selectLogo(){
-        selectFromDropdown(hoodieLogoDropdown,"Yes");
+        selectFromDropdown(hoodieLogoDropdown,"No");
+
     }
     public void verifyChangeQuantity(){
         String product =productTitle.getTextContent();

@@ -15,4 +15,8 @@ public class CartTest extends  BaseTest{
         cartSteps.verifyIfCouponApplied();
     }
 
+    @Test
+    public  void verifyRemoveCoupon(){
+        cartSteps.verifyIfCouponIsRemoved();
+    }
 }

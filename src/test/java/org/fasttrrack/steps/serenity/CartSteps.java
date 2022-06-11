@@ -10,6 +10,7 @@ public class CartSteps extends ScenarioSteps {
     private ShopPage shopPage;
     private ProductPage productPage;
     private SearchResultPage searchResultPage;
+    private CheckoutPage checkoutPage;
     @Step
     public void verifyEmptyCheckoutMessage(){
         homePage.open();
@@ -28,6 +29,19 @@ public class CartSteps extends ScenarioSteps {
         cartPage.clickApplyCouponButton();
         cartPage.verifyCouponMessage();
 
+    }
+    @Step
+    public void verifyIfCouponIsRemoved(){
+        homePage.openShop();
+        shopPage.selectOrderHighToLow();
+        shopPage.selectFirstProduct();
+        productPage.clickOnAddToCartFromProduct();
+        homePage.clickOnCart();
+        cartPage.completeCouponField();
+        cartPage.clickApplyCouponButton();
+        homePage.clickOnCheckout();
+        checkoutPage.clickOnRemoveCouponButton();
+        checkoutPage.verifyCouponRemoveMessage();
     }
     @Step
     public void addToCartHoodie(String productName){

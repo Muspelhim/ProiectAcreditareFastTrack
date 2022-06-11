@@ -93,7 +93,14 @@ public class CheckoutSteps extends ScenarioSteps {
         checkoutPage.checkoutMessageOrder();
     }
 
-
+    @Step
+    public void clickRemoveCoupon(){
+        checkoutPage.clickOnRemoveCouponButton();
+    }
+    @Step
+    public void verifyIfCouponRemoveMessage(){
+        checkoutPage.verifyCouponRemoveMessage();
+    }
     @Step
     public void proceedToCheckoutNotLoggedIn(){
         homePage.open();
