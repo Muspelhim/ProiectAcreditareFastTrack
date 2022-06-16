@@ -2,19 +2,28 @@ package org.fasttrrack.features.search;
 
 import org.junit.Test;
 
-public class CheckoutTest extends BaseTest{
+public class CheckoutTest extends BaseTest {
     @Test
-    public void verifyCheckoutMessageWithNoProduct(){
+    public void verifyCheckoutMessageWithNoProduct() {
         homePageSteps.openHomePage();
         checkoutSteps.verifyCheckoutPageWithNoProducts();
     }
+
     @Test
-    public void checkoutNotLoggedIn(){
+    public void checkoutNotLoggedIn() {
         checkoutSteps.proceedToCheckoutNotLoggedIn();
         checkoutSteps.doCheckOutNotLoggedIn();
     }
+
     @Test
-    public void checkoutLoggedIn(){
+    public void checkoutLoggedIn() {
         checkoutSteps.doCheckOutLoggedIn();
+    }
+
+    @Test
+    public void verifySubtotalPrice() {
+        checkoutSteps.proceedToCheckOutWithDiscountNotLoggedIn();
+        cartSteps.getSubtotalPrice();
+//        cartSteps.subtotalPriceCorect();
     }
 }

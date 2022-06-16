@@ -25,8 +25,7 @@ public class CartSteps extends ScenarioSteps {
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
-        cartPage.completeCouponField();
-        cartPage.clickApplyCouponButton();
+        cartPage.addDiscount();
         cartPage.verifyCouponMessage();
 
     }
@@ -49,6 +48,14 @@ public class CartSteps extends ScenarioSteps {
         homePage.searchFromTop(productName);
         searchResultPage.selectItemFromList(productName);
 
+    }
+    @Step
+    public void subtotalPriceCorect(){
+        cartPage.isSubtotalPriceCorrect();
+    }
+    @Step
+    public void getSubtotalPrice(){
+        cartPage.getSubtotalPricesCalculated();
     }
 
 }

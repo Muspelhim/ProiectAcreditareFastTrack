@@ -19,4 +19,5 @@ public class CartTest extends  BaseTest{
     public  void verifyRemoveCoupon(){
         cartSteps.verifyIfCouponIsRemoved();
     }
+
 }

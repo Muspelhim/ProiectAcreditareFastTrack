@@ -112,6 +112,18 @@ public class CheckoutSteps extends ScenarioSteps {
         checkoutPage.clickCheckoutButton();
     }
     @Step
+    public void proceedToCheckOutWithDiscountNotLoggedIn(){
+        homePage.open();
+        homePage.clickOnShop();
+        shopPage.selectOrderHighToLow();
+        shopPage.selectFirstProduct();
+        productPage.clickOnAddToCartFromProduct();
+        homePage.clickOnCart();
+        cartPage.addDiscount();
+        checkoutPage.clickCheckoutButton();
+    }
+
+    @Step
     public void doCheckOutLoggedIn(){
         homePage.open();
         homePage.clickOnLoggIN();
@@ -125,6 +137,7 @@ public class CheckoutSteps extends ScenarioSteps {
         completeCheckoutLoggedIn();
 
     }
+
     @Step
     public void completeCheckoutLoggedIn(){
         completeFirstNameLoggedIn();
@@ -149,4 +162,5 @@ public class CheckoutSteps extends ScenarioSteps {
         clickOnPlaceOrder();
         verifyCheckOutMessage();
     }
+
 }
