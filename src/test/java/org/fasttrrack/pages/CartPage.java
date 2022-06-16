@@ -6,8 +6,8 @@ import net.thucydides.core.pages.PageObject;
 import org.fasttrrack.utils.Constants;
 
 import java.util.List;
-public class CartPage extends PageObject  {
-    private BasePage basePage;
+public class CartPage extends BasePage  {
+
 
     @FindBy (css = ".cart-empty")
     private WebElementFacade emptyCart;
@@ -33,7 +33,7 @@ public class CartPage extends PageObject  {
     public int getSubtotalPricesCalculated() {
         int sum = 0;
         for (WebElementFacade element : listOfSubtotalPrices) {
-            sum += basePage.getIntFromPrice(element.getText());
+            sum += getIntFromPrice(element.getText());
         }
         System.out.println(sum);
         return sum;
@@ -41,7 +41,7 @@ public class CartPage extends PageObject  {
     }
 
     public boolean isSubtotalPriceCorrect() {
-        return getSubtotalPricesCalculated() == basePage.getIntFromPrice(subtotalText.getText());
+        return getSubtotalPricesCalculated() == getIntFromPrice(subtotalText.getText());
     }
 
 
@@ -51,11 +51,11 @@ public class CartPage extends PageObject  {
         if (shippingFeeText.isPresent()){
             y = shippingFeeText.getText();
         }
-        return basePage.getIntFromPrice(x) + basePage.getIntFromPrice(y);
+        return getIntFromPrice(x) + getIntFromPrice(y);
     }
 
     public boolean isGrandTotalPriceCorrect(){
-        return getSubtotalPriceWithTaxes() == basePage.getIntFromPrice(grandTotal.getText());
+        return getSubtotalPriceWithTaxes() == getIntFromPrice(grandTotal.getText());
     }
 
 

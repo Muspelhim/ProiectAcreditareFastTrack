@@ -134,7 +134,7 @@ public class CheckoutSteps extends ScenarioSteps {
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
         checkoutPage.clickCheckoutButton();
-        completeCheckoutLoggedIn();
+
 
     }
 

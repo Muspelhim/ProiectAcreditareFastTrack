@@ -5,7 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 
-public class MyAccountPage extends PageObject {
+public class MyAccountPage extends BasePage {
     @FindBy (css = ".current")
     private WebElementFacade verifyPage;
     @FindBy (css = "input#username")

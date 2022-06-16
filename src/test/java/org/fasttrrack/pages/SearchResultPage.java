@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-public class SearchResultPage extends PageObject {
+public class SearchResultPage extends BasePage {
     @FindBy (css = ".entry-title.ak-container")
     private WebElementFacade verifySearch;
     @FindBy (css = ".product_cat-hoodies")
@@ -27,7 +27,6 @@ public class SearchResultPage extends PageObject {
     public void selectItemFromList(String productName){
             for (WebElementFacade element : productList) {
                 if (element.findElement(By.cssSelector("h3")).getText().equalsIgnoreCase(productName)) {
-//                    element.click();
                 element.findElement(By.cssSelector("h3")).click();
                     break;
                 }

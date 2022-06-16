@@ -20,4 +20,8 @@ public class CartTest extends  BaseTest{
         cartSteps.verifyIfCouponIsRemoved();
     }
 
+    @Test
+    public void hoodie(){
+        cartSteps.addToCartHoodie("Hoodie");
+    }
 }

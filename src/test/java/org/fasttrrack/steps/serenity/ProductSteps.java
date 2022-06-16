@@ -24,14 +24,14 @@ public class ProductSteps extends ScenarioSteps {
         productPage.selectHoodieColor();
         productPage.selectLogo();
     }
-//    @Step
-//    public void selectColor(){
-//        productPage.selectHoodieColor();
-//    }
-//    @Step
-//    public void selectLogo(){
-//        productPage.selectLogo();
-//    }
+    @Step
+    public void selectColor(){
+        productPage.selectHoodieColor();
+    }
+    @Step
+    public void selectOfLogo(){
+        productPage.selectLogo();
+    }
     @Step
     public void addToCartProductFromProductPage() {
         homePage.open();
@@ -43,6 +43,7 @@ public class ProductSteps extends ScenarioSteps {
     @Step
     public void changeQuantityProduct(){
         productPage.changeQuantity();
+        productPage.clickOnAddToCartFromProduct();
         productPage.verifyChangeQuantity();
     }
     @Step

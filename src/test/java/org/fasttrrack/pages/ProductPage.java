@@ -7,16 +7,16 @@ import org.apache.commons.lang3.RandomStringUtils;
 import java.util.List;
 
 
-public class ProductPage extends PageObject {
+public class ProductPage extends BasePage {
     String quantity= RandomStringUtils.randomNumeric(1);
 
     @FindBy (css = ".single_add_to_cart_button")
     private WebElementFacade addToCartFromProduct;
     @FindBy (css = "h1.product_title")
     private WebElementFacade productTitle;
-    @FindBy (css = ".woocommerce-message:not(a)")
+    @FindBy (css = ".woocommerce-message")
     private WebElementFacade productMessage;
-    @FindBy (css = ".screen-reader-text")
+    @FindBy (css = ".qty")
     private WebElementFacade quantityProduct;
     @FindBy (css = "#pa_color")
     private WebElementFacade hoodieColorDropdown;
@@ -34,8 +34,9 @@ public class ProductPage extends PageObject {
     }
     public void verifyChangeQuantity(){
         String product =productTitle.getTextContent();
-        productMessage.shouldContainText(quantity+"x“"+product+"” have been added to your cart.");
+        productMessage.shouldContainText(quantity+" × “"+product+"” have been added to your cart.");
     }
+
     public void changeQuantity(){
         typeInto(quantityProduct,quantity);
     }

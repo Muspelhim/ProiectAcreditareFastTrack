@@ -5,7 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 
-public class CheckoutPage extends PageObject {
+public class CheckoutPage extends BasePage{
     @FindBy(css = ".woocommerce-info  ")
     private WebElementFacade checkoutMessage;
     @FindBy (css = ".checkout-button")
@@ -77,6 +77,7 @@ public class CheckoutPage extends PageObject {
     }
 
     public void clickCheckoutButton(){
+        waitABit(500);
         clickOn(checkoutButton);
     }
     public void verifyCheckoutMessage(){
