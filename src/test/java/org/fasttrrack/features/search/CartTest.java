@@ -8,7 +8,7 @@ public class CartTest extends  BaseTest{
       cartSteps.verifyEmptyCheckoutMessage();
 
     }
-
+//  Sall Robert,lucram si noi ceva azi?
 
     @Test
     public void verifyCoupon(){
