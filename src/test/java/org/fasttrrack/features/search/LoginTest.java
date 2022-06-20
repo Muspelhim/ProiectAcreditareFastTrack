@@ -10,4 +10,11 @@ public class LoginTest extends BaseTest{
     public void loggIn(){
         myAccountSteps.doLogIn(Constants.USER_EMAIL,Constants.USER_PASSWORD);
     }
+
+    @Test
+    public void verifyErrorMessageWhileUsingBadEmailFormat(){
+        myAccountSteps.loginUsingBadEmailFormat();
+    }
+
+
 }

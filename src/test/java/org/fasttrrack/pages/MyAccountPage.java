@@ -16,6 +16,8 @@ public class MyAccountPage extends BasePage {
     private WebElementFacade user;
     @FindBy (css = ".login .woocommerce-Button")
     private WebElementFacade loginButton;
+    @FindBy (css = "li strong")
+    private WebElementFacade errorMessage;
 
     public void completeEmailField(String email){
         typeInto(emailField,email);
@@ -43,5 +45,9 @@ public class MyAccountPage extends BasePage {
 
     public void verifyMyAccountPage(String message){
         verifyPage.shouldContainOnlyText("My Account");
+    }
+
+    public void verifyBadCredentialsError(){
+        errorMessage.getText().contains("ERROR: Invalid username.");
     }
 }

@@ -30,6 +30,9 @@ public class CartPage extends BasePage  {
     @FindBy(css = "#shopping-cart-totals-table tfoot .price")
     private WebElementFacade grandTotal;
 
+    @FindBy(css = ".entry-title")
+    private WebElementFacade cartPage;
+
     public int getSubtotalPricesCalculated() {
         int sum = 0;
         for (WebElementFacade element : listOfSubtotalPrices) {
@@ -78,5 +81,12 @@ public class CartPage extends BasePage  {
 
     public void verifyEmptyCart(){
         emptyCart.shouldContainOnlyText("Your cart is currently empty.");
+    }
+    public void verifyCartNotLoggedIn(){
+        cartPage.getText().equals("Cart");
+    }
+    public void verifyCartLoggedIn(){
+
+        cartPage.getText().equals("Cart");
     }
 }

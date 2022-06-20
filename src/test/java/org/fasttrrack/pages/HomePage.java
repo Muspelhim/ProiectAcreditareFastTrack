@@ -23,6 +23,8 @@ public class HomePage extends PageObject {
     private WebElementFacade shop;
     @FindBy (css = ".account")
     private WebElementFacade loggIn;
+    @FindBy (css = ".site-title")
+    private WebElementFacade homePageTitle;
 
     public void openLoggIn(){
         open();
@@ -66,5 +68,8 @@ public class HomePage extends PageObject {
     }
     public void searchFromTop(String keyword){
         typeInto(searchTop,keyword);
+    }
+    public void verifyHomePage(){
+        homePageTitle.getText().equals("FastTrackIT");
     }
 }

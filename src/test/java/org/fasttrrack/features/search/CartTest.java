@@ -24,4 +24,14 @@ public class CartTest extends  BaseTest{
     public void hoodie(){
         cartSteps.addToCartHoodie("Hoodie");
     }
+
+    @Test
+    public void verifyCartPageTitleNotLoggedIn(){
+        cartSteps.verifyCartPageNotLoggedIn();
+    }
+
+    @Test
+    public void verifyCartPageTitleLoggedIn(){
+        cartSteps.verifyCartPageLoggedIn();
+    }
 }

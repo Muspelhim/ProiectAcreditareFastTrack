@@ -25,5 +25,13 @@ public class MyAccountSteps extends ScenarioSteps {
         myAccountPage.clickLoginButton();
     }
 
+    @Step
+    public void loginUsingBadEmailFormat(){
+        homePage.open();
+        homePage.clickOnMyAccount();
+        myAccountPage.doLogin("bustiucr@gmailcom" , "pasgagoagaw2");
+        myAccountPage.verifyBadCredentialsError();
+    }
+
 
 }
