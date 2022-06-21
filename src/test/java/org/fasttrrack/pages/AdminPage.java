@@ -33,11 +33,5 @@ public class AdminPage extends PageObject {
     public void verifyAdmin(){
         adminAccount.isDisabled();
     }
-    public void clickAproveCommentButton(){
-        approveComment.getFirstSelectedOptionVisibleText();
-    }
-    public void verifyUserComment(){
-        verifyComment.getText().equals("No bine!");
-    }
 
 }

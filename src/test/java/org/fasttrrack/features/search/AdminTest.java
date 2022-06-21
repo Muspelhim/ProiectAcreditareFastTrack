@@ -17,9 +17,6 @@ public class AdminTest extends BaseTest {
     adminSteps.loginAdmin();
     adminSteps.verifyAdminPage();
   }
-  @Test
-  public void reviewOneStarOnAProduct(){
-    adminSteps.acceptAndVerifyCommentAsAdmin();
-  }
+
 }
 
