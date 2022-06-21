@@ -34,4 +34,12 @@ public class ShopSteps extends ScenarioSteps {
         homePage.clickOnShop();
         shopPage.verifyShop();
     }
+    @Step
+    public void openReviewProductPage(){
+        shopPage.clickReviewButton();
+    }
+    @Step
+    public void writeNewComment(){
+        shopPage.writeComment();
+    }
 }

@@ -14,6 +14,12 @@ public class AdminPage extends PageObject {
     private WebElementFacade passwordAdmin;
     @FindBy (id = "wp-submit")
     private WebElementFacade loginAdmin;
+    @FindBy (css= "#wp-admin-bar-my-account>a")
+    private WebElementFacade adminAccount;
+    @FindBy (css = "#comment-733 > div > p.row-actions > span.approve > a")
+    private WebElementFacade approveComment;
+    @FindBy (css = "#comment-733 > div > blockquote > p")
+    private WebElementFacade verifyComment;
 
     public void completeUserAdmin(){
         typeInto(userAdmin,"admin");
@@ -23,6 +29,15 @@ public class AdminPage extends PageObject {
     }
     public void clickLoginAdmin(){
         clickOn(loginAdmin);
+    }
+    public void verifyAdmin(){
+        adminAccount.isDisabled();
+    }
+    public void clickAproveCommentButton(){
+        approveComment.getFirstSelectedOptionVisibleText();
+    }
+    public void verifyUserComment(){
+        verifyComment.getText().equals("No bine!");
     }
 
 }

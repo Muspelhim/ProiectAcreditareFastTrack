@@ -23,8 +23,8 @@ public class HomePage extends BasePage {
     private WebElementFacade shop;
     @FindBy (css = ".account")
     private WebElementFacade loggIn;
-    @FindBy (css = ".site-title")
-    private WebElementFacade homePageTitle;
+    @FindBy (css = ".bttn")
+    private WebElementFacade readMoreButton;
 
     public void openLoggIn(){
         open();
@@ -69,7 +69,7 @@ public class HomePage extends BasePage {
     public void searchFromTop(String keyword){
         typeInto(searchTop,keyword);
     }
-    public void verifyHomePage(){
-        homePageTitle.getText().equals("FastTrackIT");
+    public void homePageVerification(){
+        readMoreButton.getText().equals("Read More");
     }
 }

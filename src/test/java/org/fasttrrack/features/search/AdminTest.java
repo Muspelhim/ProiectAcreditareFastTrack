@@ -12,4 +12,14 @@ public class AdminTest extends BaseTest {
     public void loginAsAdmin(){
       adminSteps.loginAdmin();
   }
+  @Test
+  public void verifyAdminLoggedIn(){
+    adminSteps.loginAdmin();
+    adminSteps.verifyAdminPage();
+  }
+  @Test
+  public void reviewOneStarOnAProduct(){
+    adminSteps.acceptAndVerifyCommentAsAdmin();
+  }
 }
+

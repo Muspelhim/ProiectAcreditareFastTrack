@@ -9,7 +9,7 @@ public class HomePageTest extends BaseTest{
     @Test
     public void verifyHomePageTitlePresence(){
         homePage.open();
-        homePageSteps.verifyHomePageTitle();
+        homePageSteps.verifyHomepage();
     }
 
 

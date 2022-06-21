@@ -11,6 +11,16 @@ public class ShopPage extends BasePage {
     private WebElementFacade orderProductsDropdown;
     @FindBy (css = ".columns-4 li:first-child")
     private WebElementFacade firstProduct;
+    @FindBy (css = "#tab-title-reviews")
+    private WebElementFacade reviewButton;
+    @FindBy (css = "#comment")
+    private WebElementFacade typeComment;
+    @FindBy (css = "#submit")
+    private WebElementFacade submitComment;
+    @FindBy (css = ".star-1")
+    private WebElementFacade reviewOneStar;
+    @FindBy (css = ".description")
+    private WebElementFacade verifyComment;
 
     public void selectFirstProduct(){
         clickOn(firstProduct);
@@ -25,4 +35,20 @@ public class ShopPage extends BasePage {
     public void verifyShop(){
         shopMessage.shouldContainOnlyText("Shop");
     }
+    public void clickReviewButton(){
+        clickOn(reviewButton);
+    }
+    public void writeComment(){
+        typeInto(typeComment,"No bine!");
+    }
+    public void pressOneStarReview(){
+        reviewOneStar.click();
+    }
+    public void submitComment(){
+        submitComment.click();
+    }
+    public void verifyProductComment(){
+        verifyComment.getText().equals("No bine!");
+    }
+
 }

@@ -18,6 +18,10 @@ public class MyAccountPage extends BasePage {
     private WebElementFacade loginButton;
     @FindBy (css = "li strong")
     private WebElementFacade errorMessage;
+    @FindBy (css = "a.my-account")
+    private WebElementFacade accountLink;
+    @FindBy (css = "#post-7 > div > div > div > div > div > p:nth-child(1) > a")
+    private WebElementFacade logOut;
 
     public void completeEmailField(String email){
         typeInto(emailField,email);
@@ -49,5 +53,11 @@ public class MyAccountPage extends BasePage {
 
     public void verifyBadCredentialsError(){
         errorMessage.getText().contains("ERROR: Invalid username.");
+    }
+    public void pressAccountLink(){
+        accountLink.click();
+    }
+    public void pressLogOut(){
+        logOut.click();
     }
 }

@@ -64,7 +64,8 @@ public class HomePageSteps extends ScenarioSteps {
         homePage.clickOnLoggIN();
     }
     @Step
-    public void verifyHomePageTitle(){
-        homePage.verifyHomePage();
+    public void verifyHomepage(){
+        homePage.homePageVerification();
+
     }
 }
