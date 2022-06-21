@@ -13,7 +13,20 @@ public class ProductSteps extends ScenarioSteps {
 
 
 
-
+    @Step
+    public void addAReview(){
+        productPage.reviewsTab();
+        productPage.reviewStar();
+        productPage.reviewsMessage();
+    }
+    @Step
+    public void completeReview(){
+        addAReview();
+        productPage.nameOfReviews();
+        productPage.emailOfReviews();
+        productPage.clickSubmitReview();
+        productPage.reviewSuccessMessage();
+    }
 
     @Step
     public void clickAddToCartFromProduct(){

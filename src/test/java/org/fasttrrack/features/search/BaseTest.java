@@ -3,6 +3,7 @@ package org.fasttrrack.features.search;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.fasttrrack.pages.AdminPage;
 import org.fasttrrack.steps.serenity.*;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -29,6 +30,8 @@ public class BaseTest {
     protected CartSteps cartSteps;
     @Steps
     protected ProductSteps productSteps;
+    @Steps
+    protected AdminSteps adminSteps;
 
 
     @Before

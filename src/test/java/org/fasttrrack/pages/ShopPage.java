@@ -4,7 +4,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
-public class ShopPage extends PageObject {
+public class ShopPage extends BasePage {
     @FindBy (css = ".accesspress-breadcrumb span")
     private WebElementFacade shopMessage;
     @FindBy (css = ".orderby")
