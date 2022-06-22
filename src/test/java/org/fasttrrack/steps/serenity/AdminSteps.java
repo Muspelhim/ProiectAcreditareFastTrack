@@ -26,4 +26,22 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.verifyAdmin();
     }
 
+
+    @Step
+    public void addNewProductAsAdmin(){
+        adminPage.open();
+        adminPage.completeUserAdmin();
+        adminPage.completePasswordAdmin();
+        adminPage.clickLoginAdmin();
+        adminPage.pressProductsButton();
+        adminPage.pressAddNewProduct();
+        adminPage.enterProductName();
+        adminPage.setProductDescription();
+        adminPage.pressUncategorizedProduct();
+        adminPage.setProductTags();
+        adminPage.setProductPrice();
+        adminPage.setProductSalePrice();
+        adminPage.pressPublishButton();
+        adminPage.pressViewProductButton();
+    }
 }
