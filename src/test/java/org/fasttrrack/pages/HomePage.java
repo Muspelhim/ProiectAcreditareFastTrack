@@ -25,6 +25,10 @@ public class HomePage extends BasePage {
     private WebElementFacade loggIn;
     @FindBy (css = ".bttn")
     private WebElementFacade readMoreButton;
+    @FindBy (css = ".bttn")
+    private WebElementFacade hitreadMoreButton;
+    @FindBy (css = ".entry-title")
+    private WebElementFacade readMorePageTitle;
 
     public void openLoggIn(){
         open();
@@ -71,5 +75,11 @@ public class HomePage extends BasePage {
     }
     public void homePageVerification(){
         readMoreButton.getText().equals("Read More");
+    }
+    public void clickReadMoreButton(){
+        hitreadMoreButton.click();
+    }
+    public void verifyReadMore(){
+        readMorePageTitle.getText().equals("Hello world!");
     }
 }

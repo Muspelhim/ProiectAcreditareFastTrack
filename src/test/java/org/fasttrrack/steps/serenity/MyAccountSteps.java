@@ -32,6 +32,13 @@ public class MyAccountSteps extends ScenarioSteps {
         myAccountPage.doLogin("bustiucr@gmailcom" , "pasgagoagaw2");
         myAccountPage.verifyBadCredentialsError();
     }
+    @Step
+    public void verifyWrongEmailInsertedError(){
+        homePage.open();
+        homePage.clickOnMyAccount();
+        myAccountPage.doLogin("rbustiuc@yahoo.com" , "password1");
+        myAccountPage.verifyWrongErrorMessage();
+    }
 
 
 }

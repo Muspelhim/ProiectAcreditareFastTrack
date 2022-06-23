@@ -8,4 +8,9 @@ public class MyAccountTest extends BaseTest{
     public void verifyMyAccountMessageNotLoggedIn(){
         myAccountSteps.verifyMessage();
     }
+
+    @Test
+    public void loginUsingWrongEmail(){
+      myAccountSteps.verifyWrongEmailInsertedError();
+    }
 }
