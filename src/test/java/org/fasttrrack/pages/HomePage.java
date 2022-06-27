@@ -29,6 +29,14 @@ public class HomePage extends BasePage {
     private WebElementFacade hitreadMoreButton;
     @FindBy (css = ".entry-title")
     private WebElementFacade readMorePageTitle;
+    @FindBy (css = ".cat-item a")
+    private WebElementFacade uncategorizedButton;
+    @FindBy (css = ".page-header h2")
+    private WebElementFacade uncategorizedPageTitle;
+    @FindBy (css = "#archives-2  ul  li  a")
+    private WebElementFacade archiveButton;
+    @FindBy (css = ".page-header h2")
+    private WebElementFacade archivePageTitle;
 
     public void openLoggIn(){
         open();
@@ -81,5 +89,17 @@ public class HomePage extends BasePage {
     }
     public void verifyReadMore(){
         readMorePageTitle.getText().equals("Hello world!");
+    }
+    public void pressUncategorizedButton(){
+        uncategorizedButton.click();
+    }
+    public void verifyUncategorizedPage(){
+        uncategorizedPageTitle.getText().equals("Category: Uncategorized");
+    }
+    public void verifyArchives(){
+        archiveButton.click();
+    }
+    public void verifyArchivesPage(){
+        archivePageTitle.getText().equals("Month: April 2018");
     }
 }

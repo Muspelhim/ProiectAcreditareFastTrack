@@ -17,6 +17,14 @@ public class HomePageTest extends BaseTest{
         homePage.clickReadMoreButton();
         homePage.verifyReadMore();
     }
+    @Test
+    public void verifyUncategorizedPageTitle(){
+        homePageSteps.verifyUncategorizedPageButton();
+    }
+    @Test
+    public void verifyArchivesPageTitleIsCorrect(){
+        homePageSteps.verifyArchivesPageTitle();
+    }
 
 
 }

@@ -68,4 +68,16 @@ public class HomePageSteps extends ScenarioSteps {
         homePage.homePageVerification();
 
     }
+    @Step
+    public void verifyUncategorizedPageButton(){
+        homePage.open();
+        homePage.pressUncategorizedButton();
+        homePage.verifyUncategorizedPage();
+    }
+    @Step
+    public void verifyArchivesPageTitle(){
+        homePage.open();
+        homePage.verifyArchives();
+        homePage.verifyArchivesPage();
+    }
 }
