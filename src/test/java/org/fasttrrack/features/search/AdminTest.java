@@ -14,10 +14,14 @@ public class AdminTest extends BaseTest {
     adminSteps.verifyAdminPage();
   }
 
-//  La asta mai am de lucrat(nu gasesc ceva selectori)
+
   @Test
   public void addNewProductTest(){
     adminSteps.addNewProductAsAdmin();
+  }
+  @Test
+  public void newHat(){
+    adminSteps.addNewWhiteHat();
   }
 
 }

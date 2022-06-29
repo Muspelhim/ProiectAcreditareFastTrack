@@ -29,19 +29,36 @@ public class AdminSteps extends ScenarioSteps {
 
     @Step
     public void addNewProductAsAdmin(){
-        adminPage.open();
-        adminPage.completeUserAdmin();
-        adminPage.completePasswordAdmin();
-        adminPage.clickLoginAdmin();
+        doAdminLogin();
         adminPage.pressProductsButton();
         adminPage.pressAddNewProduct();
-        adminPage.enterProductName();
-        adminPage.setProductDescription();
+        adminPage.enterProductName("Cel mai fain produs");
+        adminPage.clickProductText();
+        adminPage.setProductDescription("Ni cel mai fain produs pe care l-ai vazut vreodata!");
         adminPage.pressUncategorizedProduct();
         adminPage.setProductTags();
-        adminPage.setProductPrice();
-        adminPage.setProductSalePrice();
+        adminPage.setProductPrice("230");
+        adminPage.setProductSalePrice("150");
         adminPage.pressPublishButton();
         adminPage.pressViewProductButton();
+        adminPage.addedProductAdmin();
+    }
+    @Step
+    public void addNewWhiteHat(){
+        doAdminLogin();
+        adminPage.pressProductsButton();
+        adminPage.pressAddNewProduct();
+        adminPage.enterProductName("White Hat");
+        adminPage.clickProductText();
+        adminPage.setProductDescription("This is the best new white hat");
+        adminPage.pressUncategorizedProduct();
+        adminPage.setProductTags();
+        adminPage.setProductPrice("150");
+        adminPage.setProductSalePrice("50");
+        adminPage.addProductImage();
+        adminPage.addMedia();
+        adminPage.pressPublishButton();
+        adminPage.pressViewProductButton();
+        adminPage.addedNewHat();
     }
 }

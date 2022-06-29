@@ -24,6 +24,7 @@ public class CheckoutTest extends BaseTest {
     public void verifySubtotalPrice() {
         checkoutSteps.proceedToCheckOutWithDiscountNotLoggedIn();
         cartSteps.getSubtotalPrice();
+//        System.out.println(cartSteps.getSubtotalPrice());
 //        cartSteps.subtotalPriceCorect();
     }
 }
