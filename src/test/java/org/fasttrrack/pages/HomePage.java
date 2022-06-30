@@ -102,4 +102,5 @@ public class HomePage extends BasePage {
     public void verifyArchivesPage(){
         archivePageTitle.getText().equals("Month: April 2018");
     }
+
 }

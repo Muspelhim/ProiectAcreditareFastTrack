@@ -48,7 +48,9 @@ public class CartSteps extends ScenarioSteps {
     public void addToCartHoodie(String productName){
         homePage.openSearch();
         homePage.searchFromTop(productName);
+        homePage.clickOnSearchFromTop();
         searchResultPage.selectItemFromList(productName);
+        productPage.clickOnAddToCartFromProduct();
 
     }
     @Step

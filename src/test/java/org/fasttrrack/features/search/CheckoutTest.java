@@ -17,7 +17,7 @@ public class CheckoutTest extends BaseTest {
 
     @Test
     public void checkoutLoggedIn() {
-        checkoutSteps.doCheckOutLoggedIn();
+        checkoutSteps.doCompleteCheckOutLoggedIn();
     }
 
     @Test

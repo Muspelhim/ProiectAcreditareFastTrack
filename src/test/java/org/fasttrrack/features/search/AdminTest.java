@@ -27,6 +27,14 @@ public class AdminTest extends BaseTest {
   public void goToWooCommerceOrders(){
     adminSteps.goToOrders();
   }
+  @Test
+  public void processingOrder(){
+    checkoutSteps.doCompleteCheckoutNotLoggedIn();
 
+  }
+  @Test
+  public void dadaas(){
+    checkoutSteps.completeCheckoutLoggedIn();
+  }
 }
 

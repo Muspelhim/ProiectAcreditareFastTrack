@@ -86,6 +86,9 @@ public class AdminPage extends PageObject {
         withAction().moveToElement(wooCommerceOrders).click().build();
 //        withAction().click(wooCommerce).moveToElement(wooCommerceOrders).build();
     }
+    public void clickWooCommerce(){
+        wooCommerce.click();
+    }
 
 
 

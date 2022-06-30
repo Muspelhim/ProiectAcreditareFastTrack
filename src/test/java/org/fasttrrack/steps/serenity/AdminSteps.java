@@ -67,4 +67,8 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.adminLogin();
         adminPage.goOnOrders();
     }
+    @Step
+    public void clickOnWooCommerce(){
+        adminPage.clickWooCommerce();
+    }
 }

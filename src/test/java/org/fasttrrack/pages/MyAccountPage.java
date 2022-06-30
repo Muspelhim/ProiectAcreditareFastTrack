@@ -26,6 +26,8 @@ public class MyAccountPage extends BasePage {
     private WebElementFacade logInError;
 
 
+    private HomePage homePage;
+
 
     public void completeEmailField(String email){
         typeInto(emailField,email);

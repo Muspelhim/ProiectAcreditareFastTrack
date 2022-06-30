@@ -1,12 +1,7 @@
 package org.fasttrrack.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.pages.PageObject;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.checkerframework.checker.units.qual.C;
-import org.junit.Assert;
-
-import java.util.List;
 
 
 public class ProductPage extends BasePage {
@@ -64,7 +59,7 @@ public class ProductPage extends BasePage {
     public void reviewsMessage(){
         typeInto(reviewMessage,review);
     }
-    public void reviewStar(){
+    public void clickReviewStar(){
         clickOn(reviewRating);
     }
     public void reviewsTab(){

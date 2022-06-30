@@ -26,7 +26,7 @@ public class ProductSteps extends ScenarioSteps {
     }
     @Step
     public void reviewsStar(){
-        productPage.reviewStar();
+        productPage.clickReviewStar();
     }
     @Step
     public void clickOnReviewTab(){
@@ -39,7 +39,7 @@ public class ProductSteps extends ScenarioSteps {
     @Step
     public void addAReview(){
         productPage.reviewsTab();
-        productPage.reviewStar();
+        productPage.clickReviewStar();
         productPage.reviewsMessage();
     }
     @Step

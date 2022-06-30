@@ -102,6 +102,19 @@ public class CheckoutSteps extends ScenarioSteps {
         checkoutPage.verifyCouponRemoveMessage();
     }
     @Step
+    public void proceedToCheckOutLoggedIn(){
+        homePage.open();
+        homePage.clickOnLoggIN();
+        myAccountPage.doLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
+        homePage.clickOnShop();
+        shopPage.selectOrderHighToLow();
+        shopPage.selectFirstProduct();
+        productPage.clickOnAddToCartFromProduct();
+        homePage.clickOnCart();
+        checkoutPage.clickCheckoutButton();
+
+    }
+    @Step
     public void proceedToCheckoutNotLoggedIn(){
         homePage.open();
         homePage.clickOnShop();
@@ -149,7 +162,11 @@ public class CheckoutSteps extends ScenarioSteps {
         clickOnPlaceOrder();
         verifyCheckOutMessage();
     }
-
+    @Step
+    public void doCompleteCheckOutLoggedIn(){
+        proceedToCheckOutLoggedIn();
+        completeCheckoutLoggedIn();
+    }
     @Step
     public void doCheckOutNotLoggedIn(){
         completeFirstNameNotLoggedIn();
@@ -161,6 +178,11 @@ public class CheckoutSteps extends ScenarioSteps {
         completeEmailNotLoggedIn();
         clickOnPlaceOrder();
         verifyCheckOutMessage();
+    }
+    @Step
+    public void doCompleteCheckoutNotLoggedIn(){
+        proceedToCheckoutNotLoggedIn();
+        doCheckOutNotLoggedIn();
     }
 
 }
