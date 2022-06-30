@@ -14,5 +14,5 @@ public class Constants {
     public static final String USER_CITY = "Cluj-Napoca";
     public static final String USER_ADDRESS = "Strada Panselutelor Numarul 43";
     public static final String USER_NAME = "Robert Csete";
-    public static final String DISCOUNT = "percentage25";
+
 }

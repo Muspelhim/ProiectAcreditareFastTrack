@@ -51,7 +51,7 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.enterProductName("White Hat");
         adminPage.clickProductText();
         adminPage.setProductDescription("This is the best new white hat");
-        adminPage.pressUncategorizedProduct();
+        adminPage.clickHatCategory();
         adminPage.setProductTags();
         adminPage.setProductPrice("150");
         adminPage.setProductSalePrice("50");
@@ -60,5 +60,11 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.pressPublishButton();
         adminPage.pressViewProductButton();
         adminPage.addedNewHat();
+    }
+    @Step
+    public void goToOrders(){
+        adminPage.open();
+        adminPage.adminLogin();
+        adminPage.goOnOrders();
     }
 }

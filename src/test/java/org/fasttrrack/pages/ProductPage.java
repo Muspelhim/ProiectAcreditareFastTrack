@@ -70,6 +70,11 @@ public class ProductPage extends BasePage {
     public void reviewsTab(){
         clickOn(reviewTab);
     }
+    public void submitReviewWithNoStar(){
+        submitReview.click();
+        waitABit(900);
+        getAlert().accept();
+    }
     public void selectHoodieColor(){
         selectFromDropdown(hoodieColorDropdown,"Green");
     }

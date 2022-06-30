@@ -1,9 +1,10 @@
 package org.fasttrrack.pages;
-import org.openqa.selenium.JavascriptExecutor;
+
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.apache.bcel.generic.PUSH;
 import org.junit.Assert;
 
 import java.util.List;
@@ -49,22 +50,43 @@ public class AdminPage extends PageObject {
     private WebElementFacade addedProduct;
     @FindBy (id = "insert-media-button")
     private WebElementFacade mediaButton;
-    @FindBy (css = ".media-menu .media-menu-item:last-child")
+    @FindBy (css = "#__wp-uploader-id-3 .media-menu .media-menu-item:last-child")
     private WebElementFacade insertFromUrl;
     @FindBy (id = "embed-url-field")
     private WebElementFacade completeUrl;
-    @FindBy (css = ".media-button")
+    @FindBy (css = "#__wp-uploader-id-3 .media-toolbar-primary >button")
     private WebElementFacade insertMedia;
     @FindBy (css = ".thickbox")
     private WebElementFacade productImage;
     @FindBy (css = ".media-router .media-menu-item.active")
     private WebElementFacade mediaLibraryProduct;
-    @FindBy (css = "[src^=\"http://qa5.fasttrackit.org:8008/wp-content/uploads/2018/04/cap-2-1-300x300.jpg\"")
+    @FindBy (css = ".save-ready:nth-child(12)")
     private WebElementFacade hatPicture;
     @FindBy (css = ".button.media-button.button-primary.button-large.media-button-select")
     private WebElementFacade insertProductImage;
     @FindBy (css = "p#set-post-thumbnail-desc")
     private WebElementFacade productIMageAdded;
+    @FindBy (id = "product_cat-add-toggle")
+    private WebElementFacade addNewCategory;
+    @FindBy (css = "input#newproduct_cat")
+    private WebElementFacade completeNewCategory;
+    @FindBy (id = "product_cat-add-submit")
+    private WebElementFacade addCategoryButton;
+    @FindBy (id = "newproduct_cat_parent")
+    private WebElementFacade categorySelectForNewProduct;
+    @FindBy (id = "in-product_cat-36")
+    private WebElementFacade hatCategory;
+    @FindBy (css = "#toplevel_page_woocommerce >a")
+    private WebElementFacade wooCommerce;
+    @FindBy (css = "#toplevel_page_woocommerce .wp-first-item a")
+    private WebElementFacade wooCommerceOrders;
+
+    public void goOnOrders(){
+        withAction().moveToElement(wooCommerce).build();
+        withAction().moveToElement(wooCommerceOrders).click().build();
+//        withAction().click(wooCommerce).moveToElement(wooCommerceOrders).build();
+    }
+
 
 
     public void completeUserAdmin(){
@@ -81,6 +103,7 @@ public class AdminPage extends PageObject {
         completePasswordAdmin();
         clickLoginAdmin();
     }
+
     public void verifyAdmin(){
         adminAccount.isDisabled();
     }
@@ -146,17 +169,37 @@ public class AdminPage extends PageObject {
         insertProductImage.click();
     }
     public void verifyProductImage(){
-        Assert.assertTrue(productImage.containsOnlyText("Click the image to edit or update"));
+        Assert.assertTrue(productIMageAdded.containsOnlyText("Click the image to edit or update"));
     }
     public void addProductImage(){
         clickProductImage();
         clickMediaLibraryProduct();
         clickOnHatPicture();
         clickInsertProductImage();
-        waitABit(1500);
+        waitABit(3000);
         verifyProductImage();
     }
-
+    public void clickAddCategory(){
+        addNewCategory.click();
+    }
+    public void completeNewCategory(){
+        typeInto(completeNewCategory,"Hat");
+    }
+    public void selectTheCategory(){
+        selectFromDropdown(categorySelectForNewProduct,"Clothing");
+    }
+    public void finalClickOnNewCategory(){
+        addCategoryButton.click();
+    }
+    public void addNewHatCategory(){
+        clickAddCategory();
+        completeNewCategory();
+        selectTheCategory();
+        finalClickOnNewCategory();
+    }
+    public void clickHatCategory(){
+        hatCategory.click();
+    }
 
 
     public void pressPublishButton(){
@@ -169,10 +212,9 @@ public class AdminPage extends PageObject {
         Assert.assertTrue(addedProduct.containsOnlyText("Cel mai fain produs"));
     }
 
-    private org.openqa.selenium.JavascriptExecutor JavascriptExecutor;
-    JavascriptExecutor js=(JavascriptExecutor) ;
+
     public void addedNewHat(){
-        js.executeScript("window.scrollBy(0,1000)", "");
+
         Assert.assertTrue(addedProduct.containsOnlyText("White Hat"));
 
     }

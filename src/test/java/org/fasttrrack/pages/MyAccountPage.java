@@ -23,7 +23,9 @@ public class MyAccountPage extends BasePage {
     @FindBy (css = "#post-7 > div > div > div > div > div > p:nth-child(1) > a")
     private WebElementFacade logOut;
     @FindBy (css = ".woocommerce-error li")
-    private WebElementFacade wrongEmailError;
+    private WebElementFacade logInError;
+
+
 
     public void completeEmailField(String email){
         typeInto(emailField,email);
@@ -45,6 +47,9 @@ public class MyAccountPage extends BasePage {
         Assert.assertEquals("Hello" + user, true,"Hello robertcsete1 ");
     }
 
+    public void noCredentialsLogIn(){
+        logInError.shouldContainOnlyText("Error: Username is required.");
+    }
 
 
 
@@ -63,6 +68,6 @@ public class MyAccountPage extends BasePage {
         logOut.click();
     }
     public void verifyWrongErrorMessage(){
-        wrongEmailError.getText().contains("ERROR: The password you entered for the email address rbustiuc@yahoo.com is incorrect. ");
+        logInError.getText().contains("ERROR: The password you entered for the email address rbustiuc@yahoo.com is incorrect. ");
     }
 }

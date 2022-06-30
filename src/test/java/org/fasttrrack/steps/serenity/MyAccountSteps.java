@@ -16,14 +16,7 @@ public class MyAccountSteps extends ScenarioSteps {
         homePage.clickOnMyAccount();
         myAccountPage.verifyMyAccountPage("My Account");
     }
-    @Step
-    public void doLogIn(String email,String password){
-        homePage.open();
-        homePage.clickOnLoggIN();
-        myAccountPage.completeEmailField(email);
-        myAccountPage.completePasswordField(password);
-        myAccountPage.clickLoginButton();
-    }
+
 
     @Step
     public void loginUsingBadEmailFormat(){

@@ -12,7 +12,30 @@ public class ProductSteps extends ScenarioSteps {
     private ShopPage shopPage;
 
 
-
+    @Step
+    public void completeEmailReview(){
+        productPage.emailOfReviews();
+    }
+    @Step
+    public void completeTheReview(){
+        productPage.reviewsMessage();
+    }
+    @Step
+    public void completePersonName(){
+        productPage.nameOfReviews();
+    }
+    @Step
+    public void reviewsStar(){
+        productPage.reviewStar();
+    }
+    @Step
+    public void clickOnReviewTab(){
+        productPage.reviewsTab();
+    }
+    @Step
+    public void clickOnSubmitReview(){
+        productPage.clickSubmitReview();
+    }
     @Step
     public void addAReview(){
         productPage.reviewsTab();
@@ -28,6 +51,10 @@ public class ProductSteps extends ScenarioSteps {
         productPage.reviewSuccessMessage();
     }
 
+    @Step
+    public void clickSubmitReviewWithNoStar(){
+        productPage.submitReviewWithNoStar();
+    }
     @Step
     public void clickAddToCartFromProduct(){
         productPage.clickOnAddToCartFromProduct();

@@ -23,7 +23,8 @@ public class ShopPage extends BasePage {
     private WebElementFacade verifyComment;
 
     public void selectFirstProduct(){
-        clickOn(firstProduct);
+        withAction().moveToElement(firstProduct).click().build();
+//        clickOn(firstProduct);
     }
     public void selectNewness(){
         selectFromDropdown(orderProductsDropdown,"Sort by newness");

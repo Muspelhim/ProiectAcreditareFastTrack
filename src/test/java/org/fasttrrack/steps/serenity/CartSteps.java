@@ -3,6 +3,7 @@ package org.fasttrrack.steps.serenity;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrrack.pages.*;
+import org.fasttrrack.utils.Constants;
 
 public class CartSteps extends ScenarioSteps {
     private HomePage homePage;
@@ -68,7 +69,7 @@ public class CartSteps extends ScenarioSteps {
     public void verifyCartPageLoggedIn(){
         homePage.open();
         homePage.clickOnMyAccount();
-        myAccountPage.doLogin("robertcsete1@gmail.com" , "!Q2w3e4r5t6y");
+        myAccountPage.doLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
         homePage.clickOnCart();
         cartPage.verifyCartLoggedIn();
 

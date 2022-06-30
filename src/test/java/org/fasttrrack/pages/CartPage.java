@@ -8,7 +8,7 @@ import org.fasttrrack.utils.Constants;
 import java.util.List;
 public class CartPage extends BasePage  {
 
-
+    private String discount="percentage25";
     @FindBy (css = ".cart-empty")
     private WebElementFacade emptyCart;
     @FindBy (css = "input#coupon_code")
@@ -70,7 +70,7 @@ public class CartPage extends BasePage  {
         clickOn(applyCouponButton);
     }
     public void completeCouponField(){
-        typeInto(couponField, Constants.DISCOUNT);
+        typeInto(couponField,discount);
     }
     public void addDiscount(){
         completeCouponField();

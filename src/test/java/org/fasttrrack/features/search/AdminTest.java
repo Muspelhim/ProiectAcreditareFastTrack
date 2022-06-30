@@ -23,6 +23,10 @@ public class AdminTest extends BaseTest {
   public void newHat(){
     adminSteps.addNewWhiteHat();
   }
+  @Test
+  public void goToWooCommerceOrders(){
+    adminSteps.goToOrders();
+  }
 
 }
 

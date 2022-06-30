@@ -8,7 +8,7 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void loggIn(){
-        myAccountSteps.doLogIn(Constants.USER_EMAIL,Constants.USER_PASSWORD);
+        loginSteps.doLogIn(Constants.USER_EMAIL,Constants.USER_PASSWORD);
     }
 
     @Test
@@ -16,5 +16,9 @@ public class LoginTest extends BaseTest{
         myAccountSteps.loginUsingBadEmailFormat();
     }
 
+    @Test
+    public void doLoginWithNoCredentials(){
+        loginSteps.noCredentialsLoggIN();
+    }
 
 }
