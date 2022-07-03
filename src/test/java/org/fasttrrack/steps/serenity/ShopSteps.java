@@ -42,4 +42,32 @@ public class ShopSteps extends ScenarioSteps {
     public void writeNewComment(){
         shopPage.writeComment();
     }
+
+    @Step
+    public void orderProductsAllOptions(){
+        homePage.open();
+        homePage.clickOnShop();
+        shopPage.selectPopularity();
+        waitABit(300);
+        shopPage.selectAverageRating();
+        waitABit(300);
+        shopPage.selectLowToHigh();
+        waitABit(300);
+        shopPage.selectOrderHighToLow();
+        waitABit(300);
+        shopPage.selectNewness();
+    }
+    @Step
+    public void selectCheapestAndExpensiveProducts(){
+        homePage.open();
+        homePage.clickOnShop();
+        shopPage.selectLowToHigh();
+        shopPage.openCheapestProduct();
+        shopPage.addCheapestProductToCart();
+        shopPage.goBackToShop();
+        shopPage.selectOrderHighToLow();
+        shopPage.openExpensiveProduct();
+        shopPage.addExpensiveProductToCart();
+        shopPage.pressCartButton();
+    }
 }

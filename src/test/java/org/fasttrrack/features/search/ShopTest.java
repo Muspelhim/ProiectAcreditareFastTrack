@@ -27,4 +27,8 @@ public class ShopTest extends BaseTest{
         productSteps.changeQuantityProduct();
 
     }
+    @Test
+    public void sortProducts(){
+        shopSteps.orderProductsAllOptions();
+    }
 }
