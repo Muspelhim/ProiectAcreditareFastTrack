@@ -9,30 +9,43 @@ import org.fasttrrack.steps.serenity.ShopSteps;
 public class ShopPage extends BasePage {
     @FindBy (css = ".accesspress-breadcrumb span")
     private WebElementFacade shopMessage;
+
     @FindBy (css = ".orderby")
     private WebElementFacade orderProductsDropdown;
+
     @FindBy (css = ".columns-4 li:first-child")
     private WebElementFacade firstProduct;
+
     @FindBy (css = "#tab-title-reviews")
     private WebElementFacade reviewButton;
+
     @FindBy (css = "#comment")
     private WebElementFacade typeComment;
+
     @FindBy (css = "#submit")
     private WebElementFacade submitComment;
+
     @FindBy (css = ".star-1")
     private WebElementFacade reviewOneStar;
+
     @FindBy (css = ".description")
     private WebElementFacade verifyComment;
+
     @FindBy (css = "#primary > div > div.wc-products > ul > li.post-898.product.type-product.status-publish.product_cat-tshirts.instock.shipping-taxable.purchasable.product-type-simple > div.collection_combine > div > div > div > a > img")
     private WebElementFacade selectCheapestProduct;
+
     @FindBy (css = ".single_add_to_cart_button ")
     private WebElementFacade addCheapestProduct;
+
     @FindBy (css = "#menu-item-73 > a")
     private WebElementFacade clickOnShop;
+
     @FindBy (css = "#primary > div > div.wc-products > ul > li.post-912.product.type-product.status-publish.product_cat-tshirts.first.instock.shipping-taxable.purchasable.product-type-simple > div.collection_combine > div > div > div > a > img")
     private WebElementFacade selectExpensiveProduct;
+
     @FindBy (css = "#primary > div > div.wc-products > ul > li.post-912.product.type-product.status-publish.product_cat-tshirts.first.instock.shipping-taxable.purchasable.product-type-simple > div.collection_desc.clearfix > div > a")
     private WebElementFacade addExpensiveProduct;
+
     @FindBy (css = "#primary > div > div.wc-products > ul > li.post-912.product.type-product.status-publish.product_cat-tshirts.first.instock.shipping-taxable.purchasable.product-type-simple > div.collection_desc.clearfix > div > a")
     private WebElementFacade pressCart;
 
@@ -54,7 +67,6 @@ public class ShopPage extends BasePage {
     public void selectLowToHigh(){
         selectFromDropdown(orderProductsDropdown , "Sort by price: low to high");
     }
-
     public void verifyShop(){
         shopMessage.shouldContainOnlyText("Shop");
     }

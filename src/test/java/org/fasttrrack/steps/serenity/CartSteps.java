@@ -76,5 +76,8 @@ public class CartSteps extends ScenarioSteps {
         cartPage.verifyCartLoggedIn();
 
     }
+    @Step
+    public void comparePrices(){
+        cartPage.getIntFromPrice("lei6.00" , "lei924.00");
 
 }

@@ -8,6 +8,7 @@ import org.fasttrrack.pages.ShopPage;
 public class ShopSteps extends ScenarioSteps {
     private HomePage homePage;
     private ShopPage shopPage;
+    private CartSteps cartSteps;
 
     @Step
     public void navigateToShopPage(){
@@ -69,5 +70,9 @@ public class ShopSteps extends ScenarioSteps {
         shopPage.openExpensiveProduct();
         shopPage.addExpensiveProductToCart();
         shopPage.pressCartButton();
+        cartSteps.
+
+
+
     }
 }

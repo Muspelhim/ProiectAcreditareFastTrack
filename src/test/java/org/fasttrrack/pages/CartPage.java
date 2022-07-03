@@ -37,7 +37,7 @@ public class CartPage extends BasePage  {
     private WebElementFacade cartPage;
 
     @FindBy (css = "#post-5 > div > div > div > div > form > table > tbody > tr:nth-child(1) > td.product-price > span")
-    private WebElementFacade cheapProductPrice;
+    private WebElementFacade cheapProduct;
 
     @FindBy (css = "#post-5 > div > div > div > div > form > table > tbody > tr:nth-child(2) > td.product-price > span")
     private WebElementFacade expensiveProduct;
@@ -100,12 +100,4 @@ public class CartPage extends BasePage  {
         cartPage.getText().equals("Cart");
     }
 
-    public void compareCheapProductToExpensiveProduct(int cheapProduct , int expensiveProduct){
-
-        if (cheapProduct < expensiveProduct ){
-            return cheapProduct {
-        } else {
-            System
-        }
-    }
 }

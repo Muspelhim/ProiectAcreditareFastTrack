@@ -8,7 +8,7 @@ public class BasePage extends PageObject {
         public int getIntFromPrice(String priceNonFormatted) {
             return Integer.parseInt(priceNonFormatted
                     .replace(",", "")
-                    .replace(" RON", "")
+                    .replace("lei", "")
                     .replace(".", ""));
         }
 
