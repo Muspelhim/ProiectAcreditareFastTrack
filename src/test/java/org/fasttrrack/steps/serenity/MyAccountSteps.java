@@ -6,6 +6,7 @@ import org.fasttrrack.pages.HomePage;
 import org.fasttrrack.pages.MyAccountPage;
 
 public class MyAccountSteps extends ScenarioSteps {
+
     private HomePage homePage;
     private MyAccountPage myAccountPage;
 
@@ -25,6 +26,7 @@ public class MyAccountSteps extends ScenarioSteps {
         myAccountPage.doLogin("bustiucr@gmailcom" , "pasgagoagaw2");
         myAccountPage.verifyBadCredentialsError();
     }
+
     @Step
     public void verifyWrongEmailInsertedError(){
         homePage.open();

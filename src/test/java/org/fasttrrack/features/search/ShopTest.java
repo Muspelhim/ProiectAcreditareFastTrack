@@ -3,10 +3,13 @@ package org.fasttrrack.features.search;
 import org.junit.Test;
 
 public class ShopTest extends BaseTest{
+
+
     @Test
     public void verifyShopPage(){
         shopSteps.verifyShop();
     }
+
     @Test
     public void selectFirstProductFromShop(){
         shopSteps.navigateToShopPage();
@@ -19,6 +22,7 @@ public class ShopTest extends BaseTest{
         productSteps.addToCartProductFromProductPage();
         productSteps.verifyIfProductAddedToCart();
     }
+
     @Test
     public void verifyIfQuantityChange(){
         shopSteps.navigateToShopPage();
@@ -27,6 +31,7 @@ public class ShopTest extends BaseTest{
         productSteps.changeQuantityProduct();
 
     }
+
     @Test
     public void sortProducts(){
         shopSteps.orderProductsAllOptions();

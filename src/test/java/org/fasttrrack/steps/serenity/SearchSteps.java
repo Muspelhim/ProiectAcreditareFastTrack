@@ -7,6 +7,7 @@ import org.fasttrrack.pages.SearchResultPage;
 import org.junit.Assert;
 
 public class SearchSteps extends ScenarioSteps {
+
     private HomePage homePage;
     private SearchResultPage searchResultPage;
 
@@ -20,15 +21,18 @@ public class SearchSteps extends ScenarioSteps {
         homePage.clickOnSearchFromTop();
 
     }
+
     @Step
     public void verifySearchMessage(String productName){
         searchResultPage.verifySearchFromTop(productName);
 
     }
+
     @Step
     public void verifyProductInResults(String productName){
         Assert.assertTrue(searchResultPage.checkListForProduct(productName));
     }
+
     @Step
     public void clickOnProduct(String productName){
         searchResultPage.selectItemFromList(productName);

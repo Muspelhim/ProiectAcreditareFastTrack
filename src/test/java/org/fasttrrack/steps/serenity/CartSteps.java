@@ -6,6 +6,7 @@ import org.fasttrrack.pages.*;
 import org.fasttrrack.utils.Constants;
 
 public class CartSteps extends ScenarioSteps {
+
     private HomePage homePage;
     private CartPage cartPage;
     private ShopPage shopPage;
@@ -13,6 +14,7 @@ public class CartSteps extends ScenarioSteps {
     private SearchResultPage searchResultPage;
     private CheckoutPage checkoutPage;
     private MyAccountPage myAccountPage;
+
     @Step
     public void verifyEmptyCheckoutMessage(){
         homePage.open();
@@ -31,6 +33,7 @@ public class CartSteps extends ScenarioSteps {
         cartPage.verifyCouponMessage();
 
     }
+
     @Step
     public void verifyIfCouponIsRemoved(){
         homePage.openShop();
@@ -44,6 +47,7 @@ public class CartSteps extends ScenarioSteps {
         checkoutPage.clickOnRemoveCouponButton();
         checkoutPage.verifyCouponRemoveMessage();
     }
+
     @Step
     public void addToCartHoodie(String productName){
         homePage.openSearch();
@@ -53,20 +57,24 @@ public class CartSteps extends ScenarioSteps {
         productPage.clickOnAddToCartFromProduct();
 
     }
+
     @Step
     public void subtotalPriceCorect(){
         cartPage.isSubtotalPriceCorrect();
     }
+
     @Step
     public void getSubtotalPrice(){
         cartPage.getSubtotalPricesCalculated();
     }
+
     @Step
     public void verifyCartPageNotLoggedIn(){
         homePage.open();
         homePage.clickOnCart();
         cartPage.verifyCartNotLoggedIn();
     }
+
     @Step
     public void verifyCartPageLoggedIn(){
         homePage.open();
@@ -76,8 +84,5 @@ public class CartSteps extends ScenarioSteps {
         cartPage.verifyCartLoggedIn();
 
     }
-    @Step
-    public void comparePrices(){
-        cartPage.getIntFromPrice("lei6.00" , "lei924.00");
 
 }

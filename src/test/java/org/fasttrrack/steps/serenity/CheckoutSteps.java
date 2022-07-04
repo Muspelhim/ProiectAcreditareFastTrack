@@ -8,6 +8,7 @@ import org.fasttrrack.utils.Constants;
 
 
 public class CheckoutSteps extends ScenarioSteps {
+
     private CheckoutPage checkoutPage;
     private HomePage homePage;
     private CartPage cartPage;
@@ -32,62 +33,77 @@ public class CheckoutSteps extends ScenarioSteps {
         homePage.clickOnCheckout();
         cartPage.verifyEmptyCart();
     }
+
     @Step
     public void completeFirstNameLoggedIn(){
         checkoutPage.completeOnFirstName(Constants.USER_FIRST);
     }
+
     @Step
     public void completeLastNameLoggedIn(){
         checkoutPage.completeOnLastName(Constants.USER_LAST);
     }
+
     @Step
     public void completeAddressLoggedIn(){
         checkoutPage.completeOnAddress(Constants.USER_ADDRESS);
     }
+
     @Step
     public void completeCityLoggedIn(){
         checkoutPage.completeOnCity(Constants.USER_CITY);
     }
+
     @Step
     public void completePostCodeLoggedIn(){
         checkoutPage.completeOnPostCode(Constants.USER_POSTCODE);
     }
+
     @Step
     public void completePhoneLoggedIn(){
         checkoutPage.completeOnPhone(Constants.USER_PHONE);
     }
+
     @Step
     public void completeFirstNameNotLoggedIn(){
         checkoutPage.completeOnFirstName(firstNameNotLoggedIn);
     }
+
     @Step
     public void completeLastNameNotLoggedIn(){
         checkoutPage.completeOnLastName(lastNameNotLoggedIn);
     }
+
     @Step
     public void completeAddressNotLoggedIn(){
         checkoutPage.completeOnAddress(address);
     }
+
     @Step
     public void completeCityNotLoggedIn(){
         checkoutPage.completeOnCity(city);
     }
+
     @Step
     public void completePostcodeNotLoggedIn(){
         checkoutPage.completeOnPostCode(postcode);
     }
+
     @Step
     public void completePhoneNotLoggedIn(){
         checkoutPage.completeOnPhone(phone);
     }
+
     @Step
     public void completeEmailNotLoggedIn(){
         checkoutPage.completeOnEmail(emailNotLoggedIn);
     }
+
     @Step
     public void clickOnPlaceOrder(){
         checkoutPage.clickPlaceOrder();
     }
+
     @Step
     public void verifyCheckOutMessage(){
         checkoutPage.checkoutMessageOrder();
@@ -97,10 +113,12 @@ public class CheckoutSteps extends ScenarioSteps {
     public void clickRemoveCoupon(){
         checkoutPage.clickOnRemoveCouponButton();
     }
+
     @Step
     public void verifyIfCouponRemoveMessage(){
         checkoutPage.verifyCouponRemoveMessage();
     }
+
     @Step
     public void proceedToCheckOutLoggedIn(){
         homePage.open();
@@ -114,6 +132,7 @@ public class CheckoutSteps extends ScenarioSteps {
         checkoutPage.clickCheckoutButton();
 
     }
+
     @Step
     public void proceedToCheckoutNotLoggedIn(){
         homePage.open();
@@ -124,6 +143,7 @@ public class CheckoutSteps extends ScenarioSteps {
         homePage.clickOnCart();
         checkoutPage.clickCheckoutButton();
     }
+
     @Step
     public void proceedToCheckOutWithDiscountNotLoggedIn(){
         homePage.open();
@@ -162,11 +182,13 @@ public class CheckoutSteps extends ScenarioSteps {
         clickOnPlaceOrder();
         verifyCheckOutMessage();
     }
+
     @Step
     public void doCompleteCheckOutLoggedIn(){
         proceedToCheckOutLoggedIn();
         completeCheckoutLoggedIn();
     }
+
     @Step
     public void doCheckOutNotLoggedIn(){
         completeFirstNameNotLoggedIn();
@@ -179,6 +201,7 @@ public class CheckoutSteps extends ScenarioSteps {
         clickOnPlaceOrder();
         verifyCheckOutMessage();
     }
+
     @Step
     public void doCompleteCheckoutNotLoggedIn(){
         proceedToCheckoutNotLoggedIn();

@@ -7,6 +7,7 @@ import org.fasttrrack.pages.ProductPage;
 import org.fasttrrack.pages.ShopPage;
 
 public class ProductSteps extends ScenarioSteps {
+
     private HomePage homePage;
     private ProductPage productPage;
     private ShopPage shopPage;
@@ -16,32 +17,39 @@ public class ProductSteps extends ScenarioSteps {
     public void completeEmailReview(){
         productPage.emailOfReviews();
     }
+
     @Step
     public void completeTheReview(){
         productPage.reviewsMessage();
     }
+
     @Step
     public void completePersonName(){
         productPage.nameOfReviews();
     }
+
     @Step
     public void reviewsStar(){
         productPage.clickReviewStar();
     }
+
     @Step
     public void clickOnReviewTab(){
         productPage.reviewsTab();
     }
+
     @Step
     public void clickOnSubmitReview(){
         productPage.clickSubmitReview();
     }
+
     @Step
     public void addAReview(){
         productPage.reviewsTab();
         productPage.clickReviewStar();
         productPage.reviewsMessage();
     }
+
     @Step
     public void completeReview(){
         addAReview();
@@ -55,23 +63,28 @@ public class ProductSteps extends ScenarioSteps {
     public void clickSubmitReviewWithNoStar(){
         productPage.submitReviewWithNoStar();
     }
+
     @Step
     public void clickAddToCartFromProduct(){
         productPage.clickOnAddToCartFromProduct();
     }
+
     @Step
     public void selectColorAndLogo(){
         productPage.selectHoodieColor();
         productPage.selectLogo();
     }
+
     @Step
     public void selectColor(){
         productPage.selectHoodieColor();
     }
+
     @Step
     public void selectOfLogo(){
         productPage.selectLogo();
     }
+
     @Step
     public void addToCartProductFromProductPage() {
         homePage.open();
@@ -80,12 +93,14 @@ public class ProductSteps extends ScenarioSteps {
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
     }
+
     @Step
     public void changeQuantityProduct(){
         productPage.changeQuantity();
         productPage.clickOnAddToCartFromProduct();
         productPage.verifyChangeQuantity();
     }
+
     @Step
     public void verifyIfProductAddedToCart(){
         productPage.productAddedToCartMessage();

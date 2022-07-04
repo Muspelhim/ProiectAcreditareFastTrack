@@ -6,6 +6,7 @@ import org.fasttrrack.pages.HomePage;
 import org.fasttrrack.pages.ShopPage;
 
 public class ShopSteps extends ScenarioSteps {
+
     private HomePage homePage;
     private ShopPage shopPage;
     private CartSteps cartSteps;
@@ -15,19 +16,21 @@ public class ShopSteps extends ScenarioSteps {
         homePage.open();
         homePage.clickOnShop();
     }
+
     @Step
     public void selectHighToLow(){
         shopPage.selectOrderHighToLow();
     }
+
     @Step
     public void clickOnFirstProduct(){
         shopPage.selectFirstProduct();
     }
+
     @Step
     public void selectNewness(){
         shopPage.selectNewness();
     }
-
 
     @Step
     public void verifyShop(){
@@ -35,10 +38,12 @@ public class ShopSteps extends ScenarioSteps {
         homePage.clickOnShop();
         shopPage.verifyShop();
     }
+
     @Step
     public void openReviewProductPage(){
         shopPage.clickReviewButton();
     }
+
     @Step
     public void writeNewComment(){
         shopPage.writeComment();
@@ -58,6 +63,7 @@ public class ShopSteps extends ScenarioSteps {
         waitABit(300);
         shopPage.selectNewness();
     }
+
     @Step
     public void selectCheapestAndExpensiveProducts(){
         homePage.open();
@@ -70,7 +76,7 @@ public class ShopSteps extends ScenarioSteps {
         shopPage.openExpensiveProduct();
         shopPage.addExpensiveProductToCart();
         shopPage.pressCartButton();
-        cartSteps.
+
 
 
 

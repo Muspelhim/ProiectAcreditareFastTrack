@@ -10,6 +10,7 @@ public class ProductTest extends BaseTest{
         searchSteps.clickOnProduct("Hoodie with Logo");
         productSteps.completeReview();
     }
+
     @Test
     public void reviewWithNoStars(){
         searchSteps.searchFromTop("Hoodie");

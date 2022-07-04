@@ -9,28 +9,40 @@ public class ProductPage extends BasePage {
     String review="A nice Hoodie with a nice LOGO :)";
     @FindBy (css = ".single_add_to_cart_button")
     private WebElementFacade addToCartFromProduct;
+
     @FindBy (css = "h1.product_title")
     private WebElementFacade productTitle;
+
     @FindBy (css = ".woocommerce-message")
     private WebElementFacade productMessage;
+
     @FindBy (css = ".qty")
     private WebElementFacade quantityProduct;
+
     @FindBy (css = "#pa_color")
     private WebElementFacade hoodieColorDropdown;
+
     @FindBy (css = "#logo")
     private WebElementFacade hoodieLogoDropdown;
+
     @FindBy (css = "li#tab-title-reviews ")
     private WebElementFacade reviewTab;
+
     @FindBy (css = "textarea#comment")
     private WebElementFacade reviewMessage;
+
     @FindBy (css = ".star-5")
     private WebElementFacade reviewRating;
+
     @FindBy (css = "input#author")
     private WebElementFacade reviewName;
+
     @FindBy (css = "input#email")
     private WebElementFacade reviewEmail;
+
     @FindBy (css = "input#submit")
     private WebElementFacade submitReview;
+
     @FindBy (css = ".woocommerce-review__awaiting-approval")
     private WebElementFacade reviewSuccess;
 //    @FindBy (css = "p:nth-child(2)")
@@ -53,18 +65,23 @@ public class ProductPage extends BasePage {
     public void emailOfReviews(){
         typeInto(reviewEmail,RandomStringUtils.randomAlphabetic(8)+"@email.com");
     }
+
     public void clickSubmitReview(){
         clickOn(submitReview);
     }
+
     public void reviewsMessage(){
         typeInto(reviewMessage,review);
     }
+
     public void clickReviewStar(){
         clickOn(reviewRating);
     }
+
     public void reviewsTab(){
         clickOn(reviewTab);
     }
+
     public void submitReviewWithNoStar(){
         submitReview.click();
         waitABit(900);
@@ -73,10 +90,12 @@ public class ProductPage extends BasePage {
     public void selectHoodieColor(){
         selectFromDropdown(hoodieColorDropdown,"Green");
     }
+
     public void selectLogo(){
         selectFromDropdown(hoodieLogoDropdown,"No");
 
     }
+
     public void verifyChangeQuantity(){
         String product =productTitle.getTextContent();
         productMessage.shouldContainText(quantity+" × “"+product+"” have been added to your cart.");
@@ -86,6 +105,7 @@ public class ProductPage extends BasePage {
     public void changeQuantity(){
         typeInto(quantityProduct,quantity);
     }
+
     public void productAddedToCartMessage(){
         String product =productTitle.getTextContent();
         productMessage.shouldContainText("“"+product+"” has been added to your cart.");

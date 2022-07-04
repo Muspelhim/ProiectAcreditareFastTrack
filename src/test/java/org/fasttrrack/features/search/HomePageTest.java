@@ -11,16 +11,19 @@ public class HomePageTest extends BaseTest{
         homePage.open();
         homePageSteps.verifyHomepage();
     }
+
     @Test
     public void verifyReadMorePage(){
         homePage.open();
         homePage.clickReadMoreButton();
         homePage.verifyReadMore();
     }
+
     @Test
     public void verifyUncategorizedPageTitle(){
         homePageSteps.verifyUncategorizedPageButton();
     }
+
     @Test
     public void verifyArchivesPageTitleIsCorrect(){
         homePageSteps.verifyArchivesPageTitle();

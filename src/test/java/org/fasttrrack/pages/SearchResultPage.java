@@ -11,6 +11,7 @@ import java.util.List;
 public class SearchResultPage extends BasePage {
     @FindBy (css = ".entry-title.ak-container")
     private WebElementFacade verifySearch;
+
     @FindBy (css = ".product_cat-hoodies")
     private List<WebElementFacade> productList;
 

@@ -36,11 +36,8 @@ public class CartPage extends BasePage  {
     @FindBy (css = ".entry-title")
     private WebElementFacade cartPage;
 
-    @FindBy (css = "#post-5 > div > div > div > div > form > table > tbody > tr:nth-child(1) > td.product-price > span")
-    private WebElementFacade cheapProduct;
-
-    @FindBy (css = "#post-5 > div > div > div > div > form > table > tbody > tr:nth-child(2) > td.product-price > span")
-    private WebElementFacade expensiveProduct;
+    @FindBy (css = ".product-price")
+    private WebElementFacade priceList;
 
 
     public int getSubtotalPricesCalculated() {
@@ -76,12 +73,15 @@ public class CartPage extends BasePage  {
     public void verifyCouponMessage(){
         couponMessage.shouldContainText("COUPON:");
     }
+
     public void clickApplyCouponButton(){
         clickOn(applyCouponButton);
     }
+
     public void completeCouponField(){
         typeInto(couponField,discount);
     }
+
     public void addDiscount(){
         completeCouponField();
         clickApplyCouponButton();
@@ -92,12 +92,19 @@ public class CartPage extends BasePage  {
     public void verifyEmptyCart(){
         emptyCart.shouldContainOnlyText("Your cart is currently empty.");
     }
+
     public void verifyCartNotLoggedIn(){
         cartPage.getText().equals("Cart");
     }
+
     public void verifyCartLoggedIn(){
 
         cartPage.getText().equals("Cart");
     }
 
-}
+
+
+        }
+
+
+

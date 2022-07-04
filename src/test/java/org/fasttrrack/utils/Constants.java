@@ -3,6 +3,7 @@ package org.fasttrrack.utils;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Constants {
+
     public static final String USER_EMAIL = "robertcsete1@gmail.com";
     public static final String USER_PASSWORD = "!Q2w3e4r5t6y";
     public static final String SEARCH_LETTER = RandomStringUtils.randomAlphabetic(1);

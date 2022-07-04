@@ -4,10 +4,13 @@ import org.junit.Test;
 
 
 public class AdminTest extends BaseTest {
+
+
   @Test
     public void loginAsAdmin(){
       adminSteps.doAdminLogin();
   }
+
   @Test
   public void verifyAdminLoggedIn(){
     adminSteps.doAdminLogin();
@@ -23,10 +26,12 @@ public class AdminTest extends BaseTest {
   public void newHat(){
     adminSteps.addNewWhiteHat();
   }
+
   @Test
   public void goToWooCommerceOrders(){
     adminSteps.goToOrders();
   }
+
   @Test
   public void processingOrder(){
     checkoutSteps.doCompleteCheckoutNotLoggedIn();

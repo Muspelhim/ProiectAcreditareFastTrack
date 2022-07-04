@@ -7,6 +7,7 @@ import net.thucydides.core.pages.PageObject;
 import org.fasttrrack.steps.serenity.ShopSteps;
 
 public class ShopPage extends BasePage {
+
     @FindBy (css = ".accesspress-breadcrumb span")
     private WebElementFacade shopMessage;
 
@@ -49,60 +50,79 @@ public class ShopPage extends BasePage {
     @FindBy (css = "#primary > div > div.wc-products > ul > li.post-912.product.type-product.status-publish.product_cat-tshirts.first.instock.shipping-taxable.purchasable.product-type-simple > div.collection_desc.clearfix > div > a")
     private WebElementFacade pressCart;
 
+
     public void selectFirstProduct(){
                 clickOn(firstProduct);
     }
+
     public void selectNewness(){
         selectFromDropdown(orderProductsDropdown,"Sort by newness");
     }
+
     public void selectOrderHighToLow(){
         selectFromDropdown(orderProductsDropdown,"Sort by price: high to low");
     }
+
     public void selectPopularity(){
         selectFromDropdown(orderProductsDropdown , "Sort by popularity");
     }
+
     public void selectAverageRating(){
         selectFromDropdown(orderProductsDropdown , "Sort by average rating");
     }
+
     public void selectLowToHigh(){
         selectFromDropdown(orderProductsDropdown , "Sort by price: low to high");
     }
+
     public void verifyShop(){
         shopMessage.shouldContainOnlyText("Shop");
     }
+
     public void clickReviewButton(){
         clickOn(reviewButton);
     }
+
     public void writeComment(){
         typeInto(typeComment,"No bine!");
     }
+
     public void pressOneStarReview(){
         reviewOneStar.click();
     }
+
     public void submitComment(){
         submitComment.click();
     }
+
     public void verifyProductComment(){
         verifyComment.getText().equals("No bine!");
     }
+
     public void openCheapestProduct(){
         clickOn(selectCheapestProduct);
     }
+
     public void addCheapestProductToCart(){
         clickOn(addCheapestProduct);
     }
+
     public void goBackToShop(){
         clickOn(clickOnShop);
     }
+
     public void openExpensiveProduct(){
         clickOn(selectExpensiveProduct);
     }
+
     public void addExpensiveProductToCart(){
         clickOn(addExpensiveProduct);
     }
+
     public void pressCartButton(){
         clickOn(pressCart);
     }
+
 
 
     }

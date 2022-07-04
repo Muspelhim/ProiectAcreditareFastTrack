@@ -39,6 +39,7 @@ public class BaseTest {
     public void maximize(){
         webDriver.manage().window().maximize();
     }
+
     @After
     public void closeDriver(){
         webDriver.close();
