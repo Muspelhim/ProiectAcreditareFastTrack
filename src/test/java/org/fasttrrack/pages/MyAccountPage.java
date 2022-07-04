@@ -33,6 +33,9 @@ public class MyAccountPage extends BasePage {
     @FindBy (css = ".woocommerce-error li")
     private WebElementFacade logInError;
 
+    @FindBy (css = ".woocommerce-error li")
+    private WebElementFacade wrongPassError;
+
 
     private HomePage homePage;
 
@@ -85,5 +88,9 @@ public class MyAccountPage extends BasePage {
 
     public void verifyWrongErrorMessage(){
         logInError.getText().contains("ERROR: The password you entered for the email address rbustiuc@yahoo.com is incorrect. ");
+    }
+
+    public void verifyWrongPassError(){
+        wrongPassError.getText().contains("ERROR: The password you entered for the email address bustiucr@gmail.com is incorrect. Lost your password?");
     }
 }

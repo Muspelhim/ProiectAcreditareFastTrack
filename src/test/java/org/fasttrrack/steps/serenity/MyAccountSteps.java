@@ -35,5 +35,23 @@ public class MyAccountSteps extends ScenarioSteps {
         myAccountPage.verifyWrongErrorMessage();
     }
 
+    @Step
+    public void loginUsingWrongPassword(){
+        homePage.open();
+        homePage.clickOnMyAccount();
+        myAccountPage.doLogin("bustiucr@gmail.com" , "parolarea");
+        myAccountPage.verifyWrongPassError();
+    }
+
+    @Step
+    public void loginUsingNoCredentials(){
+        homePage.open();
+        homePage.clickOnMyAccount();
+        myAccountPage.doLogin("" , "");
+        myAccountPage.noCredentialsLogIn();
+    }
+
+
+
 
 }
