@@ -6,7 +6,6 @@ import org.fasttrrack.pages.*;
 import org.fasttrrack.utils.Constants;
 
 public class CartSteps extends ScenarioSteps {
-
     private HomePage homePage;
     private CartPage cartPage;
     private ShopPage shopPage;
@@ -16,14 +15,14 @@ public class CartSteps extends ScenarioSteps {
     private MyAccountPage myAccountPage;
 
     @Step
-    public void verifyEmptyCheckoutMessage(){
+    public void verifyEmptyCheckoutMessage() {
         homePage.open();
         homePage.clickOnCart();
         cartPage.verifyEmptyCart();
     }
 
     @Step
-    public void verifyIfCouponApplied(){
+    public void verifyIfCouponApplied() {
         homePage.openShop();
         shopPage.selectOrderHighToLow();
         shopPage.selectFirstProduct();
@@ -35,7 +34,7 @@ public class CartSteps extends ScenarioSteps {
     }
 
     @Step
-    public void verifyIfCouponIsRemoved(){
+    public void verifyIfCouponIsRemoved() {
         homePage.openShop();
         shopPage.selectOrderHighToLow();
         shopPage.selectFirstProduct();
@@ -49,7 +48,7 @@ public class CartSteps extends ScenarioSteps {
     }
 
     @Step
-    public void addToCartHoodie(String productName){
+    public void addToCartHoodie(String productName) {
         homePage.openSearch();
         homePage.searchFromTop(productName);
         homePage.clickOnSearchFromTop();
@@ -59,24 +58,24 @@ public class CartSteps extends ScenarioSteps {
     }
 
     @Step
-    public void subtotalPriceCorect(){
+    public void subtotalPriceCorect() {
         cartPage.isSubtotalPriceCorrect();
     }
 
     @Step
-    public void getSubtotalPrice(){
+    public void getSubtotalPrice() {
         cartPage.getSubtotalPricesCalculated();
     }
 
     @Step
-    public void verifyCartPageNotLoggedIn(){
+    public void verifyCartPageNotLoggedIn() {
         homePage.open();
         homePage.clickOnCart();
         cartPage.verifyCartNotLoggedIn();
     }
 
     @Step
-    public void verifyCartPageLoggedIn(){
+    public void verifyCartPageLoggedIn() {
         homePage.open();
         homePage.clickOnMyAccount();
         myAccountPage.doLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
@@ -85,4 +84,9 @@ public class CartSteps extends ScenarioSteps {
 
     }
 
+    @Step
+    public void comparePrices() {
+//        cartPage.getIntFromPrice("lei6.00" , "lei924.00");
+
+    }
 }
