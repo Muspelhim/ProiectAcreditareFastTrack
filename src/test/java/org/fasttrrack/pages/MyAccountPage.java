@@ -6,6 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 
 public class MyAccountPage extends BasePage {
+
     @FindBy (css = ".current")
     private WebElementFacade verifyPage;
 
@@ -66,9 +67,6 @@ public class MyAccountPage extends BasePage {
     public void noCredentialsLogIn(){
         logInError.shouldContainOnlyText("Error: Username is required.");
     }
-
-
-
 
     public void verifyMyAccountPage(String message){
         verifyPage.shouldContainOnlyText("My Account");

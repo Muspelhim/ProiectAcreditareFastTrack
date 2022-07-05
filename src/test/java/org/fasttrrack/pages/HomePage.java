@@ -9,6 +9,7 @@ import net.thucydides.core.pages.PageObject;
 
 @DefaultUrl("http://qa5.fasttrackit.org:8008/")
 public class HomePage extends BasePage {
+
     @FindBy (css = ".search-form .search-field")
     private WebElementFacade searchTop;
 

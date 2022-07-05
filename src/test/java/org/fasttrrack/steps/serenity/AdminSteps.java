@@ -23,11 +23,11 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.completePasswordAdmin();
         adminPage.clickLoginAdmin();
     }
+
     @Step
     public void verifyAdminPage(){
         adminPage.verifyAdmin();
     }
-
 
     @Step
     public void addNewProductAsAdmin(){
@@ -44,7 +44,6 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.pressPublishButton();
         adminPage.pressViewProductButton();
         adminPage.addedProductAdmin();
-
     }
 
     @Step
@@ -77,6 +76,7 @@ public class AdminSteps extends ScenarioSteps {
     public void clickOnWooCommerce(){
         adminPage.clickWooCommerce();
     }
+
     @Step
     public void selectUserOrder(){
         adminPage.open();

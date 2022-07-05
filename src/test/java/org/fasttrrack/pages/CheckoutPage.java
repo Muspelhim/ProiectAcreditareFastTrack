@@ -6,6 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 
 public class CheckoutPage extends BasePage{
+
     @FindBy(css = ".woocommerce-info  ")
     private WebElementFacade checkoutMessage;
 

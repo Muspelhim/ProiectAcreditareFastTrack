@@ -76,9 +76,5 @@ public class ShopSteps extends ScenarioSteps {
         shopPage.openExpensiveProduct();
         shopPage.addExpensiveProductToCart();
         shopPage.pressCartButton();
-
-
-
-
     }
 }

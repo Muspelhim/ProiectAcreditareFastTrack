@@ -5,8 +5,10 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 
 public class ProductPage extends BasePage {
+
     String quantity= RandomStringUtils.randomNumeric(1);
     String review="A nice Hoodie with a nice LOGO :)";
+
     @FindBy (css = ".single_add_to_cart_button")
     private WebElementFacade addToCartFromProduct;
 
@@ -62,6 +64,7 @@ public class ProductPage extends BasePage {
     public void nameOfReviews(){
         typeInto(reviewName,RandomStringUtils.randomAlphabetic(5)+" "+RandomStringUtils.randomAlphabetic(5));
     }
+
     public void emailOfReviews(){
         typeInto(reviewEmail,RandomStringUtils.randomAlphabetic(8)+"@email.com");
     }
@@ -86,7 +89,6 @@ public class ProductPage extends BasePage {
         submitReview.click();
         waitABit(900);
         getAlert().accept();
-        
     }
     public void selectHoodieColor(){
         selectFromDropdown(hoodieColorDropdown,"Green");
@@ -94,14 +96,12 @@ public class ProductPage extends BasePage {
 
     public void selectLogo(){
         selectFromDropdown(hoodieLogoDropdown,"No");
-
     }
 
     public void verifyChangeQuantity(){
         String product =productTitle.getTextContent();
         productMessage.shouldContainText(quantity+" × “"+product+"” have been added to your cart.");
     }
-
 
     public void changeQuantity(){
         typeInto(quantityProduct,quantity);

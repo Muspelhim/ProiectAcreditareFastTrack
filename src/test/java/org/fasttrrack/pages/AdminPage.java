@@ -118,6 +118,7 @@ public class AdminPage extends PageObject {
 
     @FindBy (css = ".column-order_number")
     private List<WebElementFacade> ordersList;
+
     @FindBy (css = ".column-order_number strong")
     private WebElementFacade userOrderName;
 
@@ -136,6 +137,7 @@ public class AdminPage extends PageObject {
         withAction().moveToElement(wooCommerceOrders).click().build();
 //        withAction().click(wooCommerce).moveToElement(wooCommerceOrders).build();
     }
+
     public void clickWooCommerce(){
         wooCommerce.click();
     }
@@ -176,6 +178,7 @@ public class AdminPage extends PageObject {
 
         typeInto(typeProductName , product);
     }
+
     public void clickProductText(){
         clickOn(productDescriptionText);
     }
@@ -212,16 +215,19 @@ public class AdminPage extends PageObject {
         typeInto(completeUrl,"https://www.screencast.com/t/ghZX3DvelSJh");
         waitABit(3000);
     }
+
     public void clickInsertMedia(){
         insertMedia.click();
         waitABit(3000);
     }
+
     public void addMedia(){
         clickMediaButton();
         clickInsertFromUrl();
         completeTheUrl();
         clickInsertMedia();
     }
+
     public void clickProductImage(){
         productImage.click();
     }
@@ -241,6 +247,7 @@ public class AdminPage extends PageObject {
     public void verifyProductImage(){
         Assert.assertTrue(productIMageAdded.containsOnlyText("Click the image to edit or update"));
     }
+
     public void addProductImage(){
         clickProductImage();
         clickMediaLibraryProduct();
@@ -264,6 +271,7 @@ public class AdminPage extends PageObject {
     public void finalClickOnNewCategory(){
         addCategoryButton.click();
     }
+
     public void addNewHatCategory(){
         clickAddCategory();
         completeNewCategory();

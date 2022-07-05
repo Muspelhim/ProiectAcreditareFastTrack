@@ -17,11 +17,11 @@ public class AdminTest extends BaseTest {
     adminSteps.verifyAdminPage();
   }
 
-
   @Test
   public void addNewProductTest(){
     adminSteps.addNewProductAsAdmin();
   }
+
   @Test
   public void newHat(){
     adminSteps.addNewWhiteHat();
@@ -35,8 +35,8 @@ public class AdminTest extends BaseTest {
   @Test
   public void processingOrder(){
     checkoutSteps.doCompleteCheckoutNotLoggedIn();
-
   }
+
   @Test
   public void userOrder(){
     adminSteps.selectUserOrder();

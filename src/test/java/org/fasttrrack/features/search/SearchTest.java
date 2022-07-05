@@ -23,7 +23,6 @@ public class SearchTest extends BaseTest{
         searchSteps.searchFromTop(product);
         searchSteps.verifyProductInResults(product);
         searchSteps.clickOnProduct(product);
-
     }
 
     @Test

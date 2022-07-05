@@ -12,20 +12,16 @@ public class SearchSteps extends ScenarioSteps {
     private SearchResultPage searchResultPage;
 
 
-
-
     @Step
     public void searchFromTop(String keyword){
         homePage.open();
         homePage.searchFromTop(keyword);
         homePage.clickOnSearchFromTop();
-
     }
 
     @Step
     public void verifySearchMessage(String productName){
         searchResultPage.verifySearchFromTop(productName);
-
     }
 
     @Step

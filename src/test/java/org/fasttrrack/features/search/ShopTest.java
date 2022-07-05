@@ -29,7 +29,6 @@ public class ShopTest extends BaseTest{
         shopSteps.selectNewness();
         shopSteps.clickOnFirstProduct();
         productSteps.changeQuantityProduct();
-
     }
 
     @Test

@@ -57,7 +57,6 @@ public class HomePageSteps extends ScenarioSteps {
     @Step
     public void clickOnCheckout(){
         homePage.clickOnCheckout();
-
     }
 
     @Step
@@ -78,7 +77,6 @@ public class HomePageSteps extends ScenarioSteps {
     @Step
     public void verifyHomepage(){
         homePage.homePageVerification();
-
     }
 
     @Step

@@ -9,6 +9,7 @@ import java.util.List;
 public class CartPage extends BasePage  {
 
     private String discount="percentage25";
+
     @FindBy (css = ".cart-empty")
     private WebElementFacade emptyCart;
 
@@ -86,8 +87,6 @@ public class CartPage extends BasePage  {
         completeCouponField();
         clickApplyCouponButton();
     }
-
-
 
     public void verifyEmptyCart(){
         emptyCart.shouldContainOnlyText("Your cart is currently empty.");

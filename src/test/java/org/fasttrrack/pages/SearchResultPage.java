@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import java.util.List;
 
 public class SearchResultPage extends BasePage {
+
     @FindBy (css = ".entry-title.ak-container")
     private WebElementFacade verifySearch;
 

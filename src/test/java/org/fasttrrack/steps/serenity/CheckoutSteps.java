@@ -130,7 +130,6 @@ public class CheckoutSteps extends ScenarioSteps {
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
         checkoutPage.clickCheckoutButton();
-
     }
 
     @Step
@@ -167,8 +166,6 @@ public class CheckoutSteps extends ScenarioSteps {
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
         checkoutPage.clickCheckoutButton();
-
-
     }
 
     @Step

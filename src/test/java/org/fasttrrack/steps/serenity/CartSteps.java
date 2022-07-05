@@ -6,6 +6,7 @@ import org.fasttrrack.pages.*;
 import org.fasttrrack.utils.Constants;
 
 public class CartSteps extends ScenarioSteps {
+
     private HomePage homePage;
     private CartPage cartPage;
     private ShopPage shopPage;
@@ -30,7 +31,6 @@ public class CartSteps extends ScenarioSteps {
         homePage.clickOnCart();
         cartPage.addDiscount();
         cartPage.verifyCouponMessage();
-
     }
 
     @Step
@@ -54,7 +54,6 @@ public class CartSteps extends ScenarioSteps {
         homePage.clickOnSearchFromTop();
         searchResultPage.selectItemFromList(productName);
         productPage.clickOnAddToCartFromProduct();
-
     }
 
     @Step
@@ -81,7 +80,6 @@ public class CartSteps extends ScenarioSteps {
         myAccountPage.doLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
         homePage.clickOnCart();
         cartPage.verifyCartLoggedIn();
-
     }
 
     @Step
