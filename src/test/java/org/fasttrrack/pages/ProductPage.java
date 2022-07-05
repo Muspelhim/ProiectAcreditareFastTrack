@@ -19,10 +19,10 @@ public class ProductPage extends BasePage {
     @FindBy (css = ".qty")
     private WebElementFacade quantityProduct;
 
-    @FindBy (css = "#pa_color")
+    @FindBy (id = "pa_color")
     private WebElementFacade hoodieColorDropdown;
 
-    @FindBy (css = "#logo")
+    @FindBy (id = "logo")
     private WebElementFacade hoodieLogoDropdown;
 
     @FindBy (css = "li#tab-title-reviews ")

@@ -17,13 +17,13 @@ public class ShopPage extends BasePage {
     @FindBy (css = ".columns-4 li:first-child")
     private WebElementFacade firstProduct;
 
-    @FindBy (css = "#tab-title-reviews")
+    @FindBy (id = "tab-title-reviews")
     private WebElementFacade reviewButton;
 
-    @FindBy (css = "#comment")
+    @FindBy (id = "comment")
     private WebElementFacade typeComment;
 
-    @FindBy (css = "#submit")
+    @FindBy (id = "submit")
     private WebElementFacade submitComment;
 
     @FindBy (css = ".star-1")

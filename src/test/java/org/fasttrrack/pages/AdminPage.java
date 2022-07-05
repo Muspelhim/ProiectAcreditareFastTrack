@@ -12,16 +12,16 @@ import java.util.List;
 
 @DefaultUrl("http://qa5.fasttrackit.org:8008/wp-admin/")
 public class AdminPage extends PageObject {
-    @FindBy (css = "#user_login")
+    @FindBy (id = "user_login")
     private WebElementFacade userAdmin;
 
-    @FindBy (css = "#user_pass")
+    @FindBy (id = "user_pass")
     private WebElementFacade passwordAdmin;
 
     @FindBy (id = "wp-submit")
     private WebElementFacade loginAdmin;
 
-    @FindBy (css= "#wp-admin-bar-my-account>a")
+    @FindBy (css = "#wp-admin-bar-my-account>a")
     private WebElementFacade adminAccount;
 
     @FindBy (css = "#comment-733 > div > p.row-actions > span.approve > a")
@@ -36,7 +36,7 @@ public class AdminPage extends PageObject {
     @FindBy (css = "#wpbody-content > div.wrap > a:nth-child(2)")
     private WebElementFacade addNewProduct;
 
-    @FindBy (css = "#title")
+    @FindBy (id = "title")
     private WebElementFacade typeProductName;
 
     @FindBy (id = "content-html")
@@ -45,19 +45,19 @@ public class AdminPage extends PageObject {
     @FindBy (css = ".wp-editor-area")
     private WebElementFacade insertProductDescription;
 
-    @FindBy (css = "#in-popular-product_cat-15")
+    @FindBy (id = "in-product_cat-15")
     private WebElementFacade uncategorizedProduct;
 
-    @FindBy (css = "#new-tag-product_tag")
+    @FindBy (id = "new-tag-product_tag")
     private WebElementFacade productTag;
 
-    @FindBy (css = "#_regular_price")
+    @FindBy (id = "_regular_price")
     private WebElementFacade setProductStartingPrice;
 
-    @FindBy (css = "#_sale_price")
+    @FindBy (id = "_sale_price")
     private WebElementFacade setSalePriceForProduct;
 
-    @FindBy (css = "#publish")
+    @FindBy (id = "publish")
     private WebElementFacade publishButton;
 
     @FindBy (css = "#message > p > a")
