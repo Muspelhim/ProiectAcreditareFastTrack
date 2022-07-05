@@ -86,6 +86,7 @@ public class ProductPage extends BasePage {
         submitReview.click();
         waitABit(900);
         getAlert().accept();
+        
     }
     public void selectHoodieColor(){
         selectFromDropdown(hoodieColorDropdown,"Green");

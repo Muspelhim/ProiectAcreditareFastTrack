@@ -1,6 +1,7 @@
 package org.fasttrrack.pages;
 
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class BasePage extends PageObject {
 
@@ -12,8 +13,5 @@ public class BasePage extends PageObject {
                     .replace(".", "")
                     .replace("lei",""));
         }
-
-
-
     }
 

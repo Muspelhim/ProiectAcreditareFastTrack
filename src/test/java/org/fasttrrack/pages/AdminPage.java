@@ -5,7 +5,9 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.apache.bcel.generic.PUSH;
+import org.fasttrrack.utils.Constants;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 
 import java.util.List;
 
@@ -114,6 +116,20 @@ public class AdminPage extends PageObject {
     @FindBy (css = "#toplevel_page_woocommerce .wp-first-item a")
     private WebElementFacade wooCommerceOrders;
 
+    @FindBy (css = ".column-order_number")
+    private List<WebElementFacade> ordersList;
+    @FindBy (css = ".column-order_number strong")
+    private WebElementFacade userOrderName;
+
+    public void selectUserOrder(String userName){
+        userName= Constants.USER_NAME;
+        for (WebElementFacade element : ordersList) {
+            if (userOrderName.getText().equalsIgnoreCase(userName)) {
+                userOrderName.click();
+                break;
+            }
+        }
+    }
 
     public void goOnOrders(){
         withAction().moveToElement(wooCommerce).build();

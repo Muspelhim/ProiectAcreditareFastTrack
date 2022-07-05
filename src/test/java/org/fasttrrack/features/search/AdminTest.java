@@ -37,6 +37,10 @@ public class AdminTest extends BaseTest {
     checkoutSteps.doCompleteCheckoutNotLoggedIn();
 
   }
+  @Test
+  public void userOrder(){
+    adminSteps.selectUserOrder();
+  }
 
 }
 

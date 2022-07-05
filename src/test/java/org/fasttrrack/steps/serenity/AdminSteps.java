@@ -6,6 +6,7 @@ import org.fasttrrack.pages.AdminPage;
 import org.fasttrrack.pages.HomePage;
 import org.fasttrrack.pages.MyAccountPage;
 import org.fasttrrack.pages.ShopPage;
+import org.fasttrrack.utils.Constants;
 
 public class AdminSteps extends ScenarioSteps {
 
@@ -43,6 +44,7 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.pressPublishButton();
         adminPage.pressViewProductButton();
         adminPage.addedProductAdmin();
+
     }
 
     @Step
@@ -74,5 +76,12 @@ public class AdminSteps extends ScenarioSteps {
     @Step
     public void clickOnWooCommerce(){
         adminPage.clickWooCommerce();
+    }
+    @Step
+    public void selectUserOrder(){
+        adminPage.open();
+        adminPage.adminLogin();
+        adminPage.clickWooCommerce();
+        adminPage.selectUserOrder(Constants.USER_NAME);
     }
 }
