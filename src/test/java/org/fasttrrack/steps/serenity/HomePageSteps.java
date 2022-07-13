@@ -33,13 +33,12 @@ public class HomePageSteps extends ScenarioSteps {
     public void verifySearchFromTheRight(){
         openHomePage();
         homePage.clickOnSearchFromRight();
-
     }
+
     @Step
     public void goToSearch(){
         homePage.openSearch();
         homePage.verifyTheSearchPage();
-
     }
 
     @Step
@@ -55,31 +54,37 @@ public class HomePageSteps extends ScenarioSteps {
     @Step
     public void openHomePage(){
         homePage.open();
+        waitABit(500);
     }
 
     @Step
     public void clickOnMyAccount(){
         homePage.clickOnMyAccount();
+        waitABit(500);
     }
 
     @Step
     public void clickOnCheckout(){
         homePage.clickOnCheckout();
+        waitABit(500);
     }
 
     @Step
     public void clickOnCart(){
         homePage.clickOnCart();
+        waitABit(500);
     }
 
     @Step
     public void clickOnShop(){
         homePage.clickOnShop();
+        waitABit(500);
     }
 
     @Step
     public void clickOnLoggIn(){
         homePage.clickOnLoggIN();
+        waitABit(500);
     }
 
     @Step

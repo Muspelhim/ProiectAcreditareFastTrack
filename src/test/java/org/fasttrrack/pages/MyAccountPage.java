@@ -37,7 +37,8 @@ public class MyAccountPage extends BasePage {
     @FindBy (css = ".woocommerce-error li")
     private WebElementFacade wrongPassError;
 
-
+    @FindBy (css = "#menu-item-71 > a")
+    private WebElementFacade myAccountCheckoutButton;
 
 
     public void completeEmailField(String email){
@@ -59,7 +60,6 @@ public class MyAccountPage extends BasePage {
     }
 
     public void verifyLoggedIn(){
-
         Assert.assertEquals("Hello" + user, true,"Hello robertcsete1 ");
     }
 
@@ -89,5 +89,9 @@ public class MyAccountPage extends BasePage {
 
     public void verifyWrongPassError(){
         wrongPassError.getText().contains("ERROR: The password you entered for the email address bustiucr@gmail.com is incorrect. Lost your password?");
+    }
+
+    public void clickCheckoutFromMyAccountPage(){
+        clickOn(myAccountCheckoutButton);
     }
 }

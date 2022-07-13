@@ -18,7 +18,6 @@ public class MyAccountSteps extends ScenarioSteps {
         myAccountPage.verifyMyAccountPage("My Account");
     }
 
-
     @Step
     public void loginUsingBadEmailFormat(){
         homePage.open();

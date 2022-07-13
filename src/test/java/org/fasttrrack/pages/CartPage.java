@@ -48,13 +48,11 @@ public class CartPage extends BasePage  {
         }
         System.out.println(sum);
         return sum;
-
     }
 
     public boolean isSubtotalPriceCorrect() {
         return getSubtotalPricesCalculated() == getIntFromPrice(subtotalText.getText());
     }
-
 
     public int getSubtotalPriceWithTaxes(){
         String x = subtotalText.getText();
@@ -68,8 +66,6 @@ public class CartPage extends BasePage  {
     public boolean isGrandTotalPriceCorrect(){
         return getSubtotalPriceWithTaxes() == getIntFromPrice(grandTotal.getText());
     }
-
-
 
     public void verifyCouponMessage(){
         couponMessage.shouldContainText("COUPON:");
@@ -97,7 +93,6 @@ public class CartPage extends BasePage  {
     }
 
     public void verifyCartLoggedIn(){
-
         cartPage.getText().equals("Cart");
     }
 

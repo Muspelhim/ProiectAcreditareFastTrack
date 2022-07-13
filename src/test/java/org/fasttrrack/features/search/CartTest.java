@@ -8,9 +8,7 @@ public class CartTest extends  BaseTest{
     @Test
     public void verifyEmptyCart(){
       cartSteps.verifyEmptyCheckoutMessage();
-
     }
-
 
     @Test
     public void verifyCoupon(){

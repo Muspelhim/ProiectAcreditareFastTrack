@@ -11,6 +11,7 @@ public class ShopSteps extends ScenarioSteps {
     private ShopPage shopPage;
     private CartSteps cartSteps;
 
+
     @Step
     public void navigateToShopPage(){
         homePage.open();

@@ -142,8 +142,6 @@ public class AdminPage extends PageObject {
         wooCommerce.click();
     }
 
-
-
     public void completeUserAdmin(){
         typeInto(userAdmin,"admin");
     }
@@ -175,7 +173,6 @@ public class AdminPage extends PageObject {
     }
 
     public void enterProductName(String product){
-
         typeInto(typeProductName , product);
     }
 
@@ -256,6 +253,7 @@ public class AdminPage extends PageObject {
         waitABit(3000);
         verifyProductImage();
     }
+
     public void clickAddCategory(){
         addNewCategory.click();
     }
@@ -278,10 +276,10 @@ public class AdminPage extends PageObject {
         selectTheCategory();
         finalClickOnNewCategory();
     }
+
     public void clickHatCategory(){
         hatCategory.click();
     }
-
 
     public void pressPublishButton(){
         publishButton.click();
@@ -295,11 +293,8 @@ public class AdminPage extends PageObject {
         Assert.assertTrue(addedProduct.containsOnlyText("Cel mai fain produs"));
     }
 
-
     public void addedNewHat(){
-
         Assert.assertTrue(addedProduct.containsOnlyText("White Hat"));
-
     }
 
 }

@@ -59,9 +59,14 @@ public class HomePage extends BasePage {
     @FindBy (css = ".entry-title.ak-container")
     private WebElementFacade verifySearchMessage;
 
+    @FindBy (css = "#menu-item-69 > a")
+    private WebElementFacade pressHomeButton;
+
+
     public void verifyTheSearchPage(){
         verifySearchMessage.shouldContainText("SEARCH RESULTS: “”");
     }
+
     public void clickOnSearchFromRight(){
         clickOn(clickOnSearchFromRight);
     }
@@ -119,8 +124,8 @@ public class HomePage extends BasePage {
 
     public void clickOnMyAccount(){
         clickOn(myAccount);
-
     }
+
     public void clickOnSearchFromTop(){
         clickOn(clickSearchTop);
     }
@@ -156,7 +161,4 @@ public class HomePage extends BasePage {
     public void verifyArchivesPage(){
         archivePageTitle.getText().equals("Month: April 2018");
     }
-
-
-
 }

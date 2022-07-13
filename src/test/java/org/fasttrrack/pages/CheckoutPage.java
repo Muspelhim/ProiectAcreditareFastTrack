@@ -49,13 +49,15 @@ public class CheckoutPage extends BasePage{
     @FindBy (css = ".woocommerce-message")
     private WebElementFacade couponRemoveMessage;
 
+    @FindBy (css = ".woocommerce-info")
+    private WebElementFacade emptyCartCheckoutMessage;
 
 
 
     public void getSubtotalPrice(){
         String price=subtotalPrice.getText();
-
     }
+
     public void clickOnRemoveCouponButton(){
         clickOn(removeCouponButton);
     }
@@ -99,7 +101,6 @@ public class CheckoutPage extends BasePage{
     public void completeOnFirstName(String firstName){
         typeInto(completeFirstName,firstName);
     }
-
 
     public void clickCheckoutButton(){
         waitABit(500);

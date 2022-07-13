@@ -47,6 +47,7 @@ public class ProductPage extends BasePage {
 
     @FindBy (css = ".woocommerce-review__awaiting-approval")
     private WebElementFacade reviewSuccess;
+
 //    @FindBy (css = "p:nth-child(2)")
 //    private WebElementFacade wrongEmailReview;
 //
@@ -56,11 +57,11 @@ public class ProductPage extends BasePage {
 //        Assert.assertTrue(email,"ERROR: please enter a valid email address.");
 //    }
 //    "Your review is awaiting approval"
+
     public void reviewSuccessMessage(){
         reviewSuccess.getText().equals("Your review is awaiting approval");
-
-
     }
+
     public void nameOfReviews(){
         typeInto(reviewName,RandomStringUtils.randomAlphabetic(5)+" "+RandomStringUtils.randomAlphabetic(5));
     }
@@ -90,6 +91,7 @@ public class ProductPage extends BasePage {
         waitABit(900);
         getAlert().accept();
     }
+
     public void selectHoodieColor(){
         selectFromDropdown(hoodieColorDropdown,"Green");
     }

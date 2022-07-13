@@ -26,8 +26,6 @@ public class CheckoutSteps extends ScenarioSteps {
     private String emailNotLoggedIn=RandomStringUtils.randomAlphabetic(10)+"@email.com";
 
 
-
-
     @Step
     public void verifyCheckoutPageWithNoProducts(){
         homePage.clickOnCheckout();
@@ -204,5 +202,4 @@ public class CheckoutSteps extends ScenarioSteps {
         proceedToCheckoutNotLoggedIn();
         doCheckOutNotLoggedIn();
     }
-
 }
