@@ -3,8 +3,6 @@ package org.fasttrrack.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
-
 
 
 @DefaultUrl("http://qa5.fasttrackit.org:8008/")
@@ -51,6 +49,27 @@ public class HomePage extends BasePage {
 
     @FindBy (css = ".page-header h2")
     private WebElementFacade archivePageTitle;
+
+    @FindBy (css = ".widget .search-field")
+    private WebElementFacade searchOnTheRight;
+
+    @FindBy (css = ".widget  .fa-search")
+    private WebElementFacade clickOnSearchFromRight;
+
+    @FindBy (css = ".entry-title.ak-container")
+    private WebElementFacade verifySearchMessage;
+
+    public void verifyTheSearchPage(){
+        verifySearchMessage.shouldContainText("SEARCH RESULTS: “”");
+    }
+    public void clickOnSearchFromRight(){
+        clickOn(clickOnSearchFromRight);
+    }
+
+    public void completeSearchFromTheRight(String search){
+        open();
+        typeInto(searchOnTheRight,search);
+    }
 
     public void openLoggIn(){
         open();

@@ -38,7 +38,6 @@ public class MyAccountPage extends BasePage {
     private WebElementFacade wrongPassError;
 
 
-    private HomePage homePage;
 
 
     public void completeEmailField(String email){

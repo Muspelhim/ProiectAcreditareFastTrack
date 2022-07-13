@@ -30,8 +30,16 @@ public class HomePageSteps extends ScenarioSteps {
     }
 
     @Step
+    public void verifySearchFromTheRight(){
+        openHomePage();
+        homePage.clickOnSearchFromRight();
+
+    }
+    @Step
     public void goToSearch(){
         homePage.openSearch();
+        homePage.verifyTheSearchPage();
+
     }
 
     @Step

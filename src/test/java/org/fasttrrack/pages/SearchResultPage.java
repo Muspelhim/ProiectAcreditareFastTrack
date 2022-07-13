@@ -16,6 +16,12 @@ public class SearchResultPage extends BasePage {
     @FindBy (css = ".product_cat-hoodies")
     private List<WebElementFacade> productList;
 
+    @FindBy (css = ".woocommerce-info")
+    private WebElementFacade noProductInSearch;
+
+    public void noProductsInSearch(){
+        noProductInSearch.shouldContainOnlyText("No products were found matching your selection.");
+    }
 
     public boolean checkListForProduct(String productName) {
         for (WebElementFacade element : productList) {

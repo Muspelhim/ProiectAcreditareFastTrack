@@ -34,4 +34,11 @@ public class SearchSteps extends ScenarioSteps {
         searchResultPage.selectItemFromList(productName);
         waitABit(3000);
     }
+
+    @Step
+    public void searchProductFromRight(String search){
+        homePage.completeSearchFromTheRight(search);
+        homePage.clickOnSearchFromRight();
+        searchResultPage.noProductsInSearch();
+    }
 }

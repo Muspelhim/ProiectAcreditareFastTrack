@@ -33,5 +33,9 @@ public class SearchTest extends BaseTest{
         productSteps.selectColorAndLogo();
         productSteps.clickAddToCartFromProduct();
     }
+    @Test
+    public void searchProductFromTheRight(){
+        searchSteps.searchProductFromRight("pijamas");
+    }
 
 }

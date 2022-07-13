@@ -29,5 +29,13 @@ public class HomePageTest extends BaseTest{
         homePageSteps.verifyArchivesPageTitle();
     }
 
+    @Test
+    public void verifySearchButton(){
+        homePageSteps.goToSearch();
+    }
+    @Test
+    public void verifySearchFromRight(){
+        homePageSteps.verifySearchFromTheRight();
+    }
 
 }
