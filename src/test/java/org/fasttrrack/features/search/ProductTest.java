@@ -4,6 +4,7 @@ import org.junit.Test;
 
 public class ProductTest extends BaseTest{
 
+
     @Test
     public void leaveAReview(){
         searchSteps.searchFromTop("Hoodie");
@@ -24,7 +25,5 @@ public class ProductTest extends BaseTest{
         productSteps.clickSubmitReviewWithNoStar();
         productSteps.reviewsStar();
         productSteps.clickOnSubmitReview();
-
-
     }
 }

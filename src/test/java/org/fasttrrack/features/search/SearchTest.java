@@ -6,6 +6,7 @@ import org.junit.Test;
 public class SearchTest extends BaseTest{
     private String product = "Hoodie";
 
+
     @Test
     public void searchWith1Letter(){
         searchSteps.searchFromTop(Constants.SEARCH_LETTER);
@@ -33,6 +34,7 @@ public class SearchTest extends BaseTest{
         productSteps.selectColorAndLogo();
         productSteps.clickAddToCartFromProduct();
     }
+
     @Test
     public void searchProductFromTheRight(){
         searchSteps.searchProductFromRight("pijamas");

@@ -13,6 +13,7 @@ import java.util.List;
 
 @DefaultUrl("http://qa5.fasttrackit.org:8008/wp-admin/")
 public class AdminPage extends PageObject {
+
     @FindBy (id = "user_login")
     private WebElementFacade userAdmin;
 
@@ -133,6 +134,7 @@ public class AdminPage extends PageObject {
 
     @FindBy (css = ".column-order_number strong")
     private WebElementFacade userOrderName;
+
 
     public void accessComments(){
         goToComments.click();

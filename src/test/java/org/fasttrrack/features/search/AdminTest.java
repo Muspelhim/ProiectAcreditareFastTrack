@@ -5,10 +5,7 @@ import org.junit.Test;
 
 
 public class AdminTest extends BaseTest {
-//  @Before
-//  public void maximize(){
-//    webDriver.manage().window().maximize();
-//  }
+
 
   @Test
     public void loginAsAdmin(){

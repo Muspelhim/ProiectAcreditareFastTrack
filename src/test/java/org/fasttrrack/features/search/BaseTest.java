@@ -13,24 +13,34 @@ import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
 public class BaseTest {
+
     @Managed(uniqueSession = true)
     public WebDriver webDriver;
+
     @Steps
     protected SearchSteps searchSteps;
+
     @Steps
     protected LoginSteps loginSteps;
+
     @Steps
     protected MyAccountSteps myAccountSteps;
+
     @Steps
     protected HomePageSteps homePageSteps;
+
     @Steps
     protected ShopSteps shopSteps;
+
     @Steps
     protected CheckoutSteps checkoutSteps;
+
     @Steps
     protected CartSteps cartSteps;
+
     @Steps
     protected ProductSteps productSteps;
+
     @Steps
     protected AdminSteps adminSteps;
 
