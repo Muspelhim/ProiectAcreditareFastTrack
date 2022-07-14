@@ -32,7 +32,7 @@ public class SearchSteps extends ScenarioSteps {
     @Step
     public void clickOnProduct(String productName){
         searchResultPage.selectItemFromList(productName);
-        waitABit(3000);
+        waitABit(1000);
     }
 
     @Step

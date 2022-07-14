@@ -1,10 +1,14 @@
 package org.fasttrrack.features.search;
 
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class AdminTest extends BaseTest {
-
+//  @Before
+//  public void maximize(){
+//    webDriver.manage().window().maximize();
+//  }
 
   @Test
     public void loginAsAdmin(){
@@ -41,6 +45,18 @@ public class AdminTest extends BaseTest {
   public void userOrder(){
     adminSteps.selectUserOrder();
   }
+
+  @Test
+  public void completeTheReview(){
+    searchSteps.searchFromTop("Hoodie");
+    searchSteps.clickOnProduct("Hoodie with Logo");
+    productSteps.completeReview();
+    closeDriver();
+    adminSteps.doAdminLogin();
+    adminSteps.accessTheComments();
+    adminSteps.approveTheCommentFromTheCommentsList();
+  }
+
 
 }
 

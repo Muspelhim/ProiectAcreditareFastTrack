@@ -63,6 +63,8 @@ public class ShopSteps extends ScenarioSteps {
         shopPage.selectOrderHighToLow();
         waitABit(300);
         shopPage.selectNewness();
+        waitABit(300);
+
     }
 
     @Step

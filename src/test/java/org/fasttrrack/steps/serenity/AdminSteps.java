@@ -84,4 +84,15 @@ public class AdminSteps extends ScenarioSteps {
         adminPage.clickWooCommerce();
         adminPage.selectUserOrder(Constants.USER_NAME);
     }
+    @Step
+    public void approveTheCommentFromTheCommentsList(){
+        adminPage.goToFirstComment();
+//        waitABit(300);
+        adminPage.approveFromCommentsHover();
+//        waitABit(300);
+    }
+    @Step
+    public void accessTheComments(){
+        adminPage.accessComments();
+    }
 }

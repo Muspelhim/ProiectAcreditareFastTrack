@@ -11,7 +11,6 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-
 @DefaultUrl("http://qa5.fasttrackit.org:8008/wp-admin/")
 public class AdminPage extends PageObject {
     @FindBy (id = "user_login")
@@ -26,13 +25,26 @@ public class AdminPage extends PageObject {
     @FindBy (css = "#wp-admin-bar-my-account>a")
     private WebElementFacade adminAccount;
 
+    @FindBy (css = ".menu-icon-comments .wp-menu-name")
+    private WebElementFacade goToComments;
+
     @FindBy (css = "#comment-733 > div > p.row-actions > span.approve > a")
     private WebElementFacade approveComment;
 
     @FindBy (css = "#comment-733 > div > blockquote > p")
     private WebElementFacade verifyComment;
 
-    @FindBy (css = "#menu-posts-product > a > div.wp-menu-image.dashicons-before.dashicons-admin-post")
+    @FindBy(id = "the-comment-list")
+    private List<WebElementFacade>commentList;
+
+    @FindBy(css = "#the-comment-list .even:first-child .row-actions")
+    private WebElementFacade firstComment;
+
+    @FindBy (css = "#the-comment-list .even:first-child .row-actions .approve")
+    private WebElementFacade approveCommentFromTheList;
+
+    @FindBy (css = ".menu-icon-product .wp-menu-name")
+//    #menu-posts-product > a > div.wp-menu-image.dashicons-before.dashicons-admin-post (acesta era inainte si l-am facut mai mic)
     private WebElementFacade pressProducts;
 
     @FindBy (css = "#wpbody-content > div.wrap > a:nth-child(2)")
@@ -122,6 +134,18 @@ public class AdminPage extends PageObject {
     @FindBy (css = ".column-order_number strong")
     private WebElementFacade userOrderName;
 
+    public void accessComments(){
+        goToComments.click();
+    }
+    public void goToFirstComment(){
+        withAction().moveToElement(firstComment);
+
+    }
+    public void approveFromCommentsHover(){
+        withAction().moveToElement(approveCommentFromTheList).click();
+
+    }
+
     public void selectUserOrder(String userName){
         userName= Constants.USER_NAME;
         for (WebElementFacade element : ordersList) {
@@ -164,6 +188,9 @@ public class AdminPage extends PageObject {
         adminAccount.isDisabled();
     }
 
+    public void commentsSection(){
+        goToComments.click();
+    }
     public void pressProductsButton(){
         pressProducts.click();
     }
@@ -197,7 +224,7 @@ public class AdminPage extends PageObject {
     }
 
     public void setProductSalePrice(String salePrice){
-    typeInto(setSalePriceForProduct , salePrice);
+        typeInto(setSalePriceForProduct , salePrice);
     }
 
     public void clickMediaButton(){
