@@ -127,7 +127,7 @@ public class CheckoutSteps extends ScenarioSteps {
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
-        checkoutPage.clickCheckoutButton();
+        cartPage.clickCheckoutButton();
     }
 
     @Step
@@ -138,7 +138,7 @@ public class CheckoutSteps extends ScenarioSteps {
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
-        checkoutPage.clickCheckoutButton();
+        cartPage.clickCheckoutButton();
     }
 
     @Step
@@ -150,7 +150,7 @@ public class CheckoutSteps extends ScenarioSteps {
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
         cartPage.addDiscount();
-        checkoutPage.clickCheckoutButton();
+        cartPage.clickCheckoutButton();
     }
 
     @Step
@@ -163,7 +163,7 @@ public class CheckoutSteps extends ScenarioSteps {
         shopPage.selectFirstProduct();
         productPage.clickOnAddToCartFromProduct();
         homePage.clickOnCart();
-        checkoutPage.clickCheckoutButton();
+        cartPage.clickCheckoutButton();
     }
 
     @Step

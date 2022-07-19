@@ -15,7 +15,25 @@ public class CartSteps extends ScenarioSteps {
     private CheckoutPage checkoutPage;
     private MyAccountPage myAccountPage;
 
+    @Step
+    public void changeTheQuantityOfOneProduct(){
+        cartPage.changeTheQuantityFOrOneProduct();
+    }
 
+    @Step
+    public void clickOnUpdateCart(){
+        cartPage.clickUpdateCart();
+    }
+
+    @Step
+    public void verifyCartUpdateMessage(){
+        cartPage.updateCartMessage();
+    }
+
+    @Step
+    public void clickOnProceedToCheckout(){
+        cartPage.clickCheckoutButton();
+    }
     @Step
     public void verifyEmptyCheckoutMessage() {
         homePage.open();

@@ -21,7 +21,7 @@ public class CartTest extends  BaseTest{
     }
 
     @Test
-    public void hoodie(){
+    public void addToCartHoodie(){
         cartSteps.addToCartHoodie("Hoodie");
     }
 
@@ -33,5 +33,17 @@ public class CartTest extends  BaseTest{
     @Test
     public void verifyCartPageTitleLoggedIn(){
         cartSteps.verifyCartPageLoggedIn();
+    }
+
+    @Test
+    public void verifyIfQuantityChanged(){
+        cartSteps.addToCartHoodie("hoodie");
+        productSteps.selectColor();
+        productSteps.selectOfLogo();
+        productSteps.clickAddToCartFromProduct();
+        homePageSteps.goToCart();
+        cartSteps.changeTheQuantityOfOneProduct();
+        cartSteps.clickOnUpdateCart();
+        cartSteps.verifyCartUpdateMessage();
     }
 }

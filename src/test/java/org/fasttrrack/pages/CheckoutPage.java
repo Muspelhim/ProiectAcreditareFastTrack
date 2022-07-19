@@ -3,15 +3,13 @@ package org.fasttrrack.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 
 public class CheckoutPage extends BasePage{
 
     @FindBy(css = ".woocommerce-info  ")
     private WebElementFacade checkoutMessage;
-
-    @FindBy (css = ".checkout-button")
-    private WebElementFacade checkoutButton;
 
     @FindBy (css = ".input-text#billing_first_name")
     private WebElementFacade completeFirstName;
@@ -51,6 +49,7 @@ public class CheckoutPage extends BasePage{
 
     @FindBy (css = ".woocommerce-info")
     private WebElementFacade emptyCartCheckoutMessage;
+
 
 
 
@@ -102,10 +101,7 @@ public class CheckoutPage extends BasePage{
         typeInto(completeFirstName,firstName);
     }
 
-    public void clickCheckoutButton(){
-        waitABit(500);
-        clickOn(checkoutButton);
-    }
+
 
     public void verifyCheckoutMessage(){
         checkoutMessage.shouldContainOnlyText("Checkout is not available whilst your cart is empty.");

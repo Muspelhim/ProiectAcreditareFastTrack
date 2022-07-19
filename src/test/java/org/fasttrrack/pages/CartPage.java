@@ -3,6 +3,7 @@ package org.fasttrrack.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.fasttrrack.utils.Constants;
 
 import java.util.List;
@@ -40,13 +41,41 @@ public class CartPage extends BasePage  {
     @FindBy (css = ".product-price")
     private WebElementFacade priceList;
 
+    @FindBy (css = ".checkout-button")
+    private WebElementFacade checkoutButton;
+
+    @FindBy (css = ".qty")
+    private WebElementFacade quantityCheckoutForOneProduct;
+
+    @FindBy (css = "[name=update_cart]")
+    private WebElementFacade updateCart;
+
+    @FindBy (css = ".woocommerce-message")
+    private WebElementFacade cartUpdateMessage;
+
+    public void updateCartMessage(){
+        cartUpdateMessage.shouldContainText("Cart updated.");
+    }
+
+    public void clickUpdateCart(){
+        clickOn(updateCart);
+    }
+
+    public void changeTheQuantityFOrOneProduct(){
+        typeInto(quantityCheckoutForOneProduct, RandomStringUtils.randomNumeric(1));
+    }
+
+    public void clickCheckoutButton(){
+        waitABit(500);
+        clickOn(checkoutButton);
+    }
+
 
     public int getSubtotalPricesCalculated() {
         int sum = 0;
         for (WebElementFacade element : listOfSubtotalPrices) {
             sum += getIntFromPrice(element.getText());
         }
-        System.out.println(sum);
         return sum;
     }
 
