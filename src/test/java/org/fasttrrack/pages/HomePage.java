@@ -116,6 +116,7 @@ public class HomePage extends BasePage {
 
     public void clickOnCart(){
         clickOn(cart);
+        waitABit(500);
     }
 
     public void clickOnShop(){

@@ -50,6 +50,12 @@ public class MyAccountSteps extends ScenarioSteps {
         myAccountPage.noCredentialsLogIn();
     }
 
+    @Step
+    public void doLogout(){
+        myAccountPage.pressLogout();
+        waitABit(500);
+    }
+
 
 
 

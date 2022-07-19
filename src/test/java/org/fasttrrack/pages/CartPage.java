@@ -53,6 +53,7 @@ public class CartPage extends BasePage  {
     @FindBy (css = ".woocommerce-message")
     private WebElementFacade cartUpdateMessage;
 
+
     public void updateCartMessage(){
         cartUpdateMessage.shouldContainText("Cart updated.");
     }
@@ -125,8 +126,9 @@ public class CartPage extends BasePage  {
         cartPage.getText().equals("Cart");
     }
 
-
-
+    public void verifyCheckoutButton(){
+        checkoutButton.getText().equals(" Proceed to checkout");
+    }
         }
 
 

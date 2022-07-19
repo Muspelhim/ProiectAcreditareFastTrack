@@ -28,8 +28,8 @@ public class MyAccountPage extends BasePage {
     @FindBy (css = "a.my-account")
     private WebElementFacade accountLink;
 
-    @FindBy (css = "#post-7 > div > div > div > div > div > p:nth-child(1) > a")
-    private WebElementFacade logOut;
+    @FindBy (css = "#mastheads > div.top-header.clearfix > div > div.headertwo-wrap > div.login-woocommerce > a")
+    private WebElementFacade logoutButton;
 
     @FindBy (css = ".woocommerce-error li")
     private WebElementFacade logInError;
@@ -79,10 +79,6 @@ public class MyAccountPage extends BasePage {
         accountLink.click();
     }
 
-    public void pressLogOut(){
-        logOut.click();
-    }
-
     public void verifyWrongErrorMessage(){
         logInError.getText().contains("ERROR: The password you entered for the email address rbustiuc@yahoo.com is incorrect. ");
     }
@@ -93,5 +89,9 @@ public class MyAccountPage extends BasePage {
 
     public void clickCheckoutFromMyAccountPage(){
         clickOn(myAccountCheckoutButton);
+    }
+
+    public void pressLogout(){
+        clickOn(logoutButton);
     }
 }
