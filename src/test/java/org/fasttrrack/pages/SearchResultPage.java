@@ -19,6 +19,7 @@ public class SearchResultPage extends BasePage {
     @FindBy (css = ".woocommerce-info")
     private WebElementFacade noProductInSearch;
 
+
     public void noProductsInSearch(){
         noProductInSearch.shouldContainOnlyText("No products were found matching your selection.");
     }

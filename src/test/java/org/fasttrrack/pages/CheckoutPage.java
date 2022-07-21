@@ -51,8 +51,6 @@ public class CheckoutPage extends BasePage{
     private WebElementFacade emptyCartCheckoutMessage;
 
 
-
-
     public void getSubtotalPrice(){
         String price=subtotalPrice.getText();
     }
@@ -100,8 +98,6 @@ public class CheckoutPage extends BasePage{
     public void completeOnFirstName(String firstName){
         typeInto(completeFirstName,firstName);
     }
-
-
 
     public void verifyCheckoutMessage(){
         checkoutMessage.shouldContainOnlyText("Checkout is not available whilst your cart is empty.");

@@ -64,7 +64,6 @@ public class ShopSteps extends ScenarioSteps {
         waitABit(300);
         shopPage.selectNewness();
         waitABit(300);
-
     }
 
     @Step

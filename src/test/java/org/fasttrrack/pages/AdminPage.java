@@ -193,6 +193,7 @@ public class AdminPage extends PageObject {
     public void commentsSection(){
         goToComments.click();
     }
+
     public void pressProductsButton(){
         pressProducts.click();
     }

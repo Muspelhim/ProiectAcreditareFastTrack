@@ -71,7 +71,6 @@ public class CartPage extends BasePage  {
         clickOn(checkoutButton);
     }
 
-
     public int getSubtotalPricesCalculated() {
         int sum = 0;
         for (WebElementFacade element : listOfSubtotalPrices) {
