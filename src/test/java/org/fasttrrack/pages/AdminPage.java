@@ -26,7 +26,7 @@ public class AdminPage extends PageObject {
     @FindBy (css = "#wp-admin-bar-my-account>a")
     private WebElementFacade adminAccount;
 
-    @FindBy (css = ".menu-icon-comments .wp-menu-name")
+    @FindBy (css = "div.wp-menu-image.dashicons-before.dashicons-admin-comments")
     private WebElementFacade goToComments;
 
     @FindBy (css = "#comment-733 > div > p.row-actions > span.approve > a")
@@ -41,7 +41,7 @@ public class AdminPage extends PageObject {
     @FindBy(css = "#the-comment-list .even:first-child .row-actions")
     private WebElementFacade firstComment;
 
-    @FindBy (css = "#the-comment-list .even:first-child .row-actions .approve")
+    @FindBy (css = "#comment-785 > td.comment.column-comment.has-row-actions.column-primary > div.row-actions > span.approve > a")
     private WebElementFacade approveCommentFromTheList;
 
     @FindBy (css = ".menu-icon-product .wp-menu-name")
@@ -161,7 +161,7 @@ public class AdminPage extends PageObject {
     public void goOnOrders(){
         withAction().moveToElement(wooCommerce).build();
         withAction().moveToElement(wooCommerceOrders).click().build();
-//        withAction().click(wooCommerce).moveToElement(wooCommerceOrders).build();
+        withAction().click(wooCommerce).moveToElement(wooCommerceOrders).build();
     }
 
     public void clickWooCommerce(){

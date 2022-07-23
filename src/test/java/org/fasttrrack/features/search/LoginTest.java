@@ -21,4 +21,18 @@ public class LoginTest extends BaseTest{
         loginSteps.noCredentialsLoggIN();
     }
 
+    @Test
+    public void loginWithOneLetterAndOneNumber(){
+        loginSteps.doLogIn("a" , "1");
+    }
+
+    @Test
+    public void loginUsingOnlyLetters(){
+        loginSteps.doLogIn("abcdefghijkl@email.com" , "mnopqrstuvxz");
+    }
+
+    @Test
+    public void loginUsingOnlyNumbers(){
+        loginSteps.doLogIn("12345@email.com" , "67890");
+    }
 }
