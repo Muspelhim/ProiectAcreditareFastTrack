@@ -121,7 +121,7 @@ public class CheckoutSteps extends ScenarioSteps {
     public void proceedToCheckOutLoggedIn(){
         homePage.open();
         homePage.clickOnLoggIN();
-        myAccountPage.doLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
+        myAccountPage.doLogin(Constants.ROBERT_EMAIL,Constants.ROBERT_PASSWORD);
         homePage.clickOnShop();
         shopPage.selectOrderHighToLow();
         shopPage.selectFirstProduct();
@@ -157,7 +157,7 @@ public class CheckoutSteps extends ScenarioSteps {
     public void doCheckOutLoggedIn(){
         homePage.open();
         homePage.clickOnLoggIN();
-        myAccountPage.doLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
+        myAccountPage.doLogin(Constants.ROBERT_EMAIL,Constants.ROBERT_PASSWORD);
         homePage.clickOnShop();
         shopPage.selectOrderHighToLow();
         shopPage.selectFirstProduct();

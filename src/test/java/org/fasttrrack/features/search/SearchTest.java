@@ -9,14 +9,14 @@ public class SearchTest extends BaseTest{
 
     @Test
     public void searchWith1Letter(){
-        searchSteps.searchFromTop(Constants.SEARCH_LETTER);
-        searchSteps.verifySearchMessage(Constants.SEARCH_LETTER);
+        searchSteps.searchFromTop(Constants.ONE_LETTER);
+        searchSteps.verifySearchMessage(Constants.ONE_LETTER);
     }
 
     @Test
     public void searchWith1Number(){
-        searchSteps.searchFromTop(Constants.SEARCH_NUMBER);
-        searchSteps.verifySearchMessage(Constants.SEARCH_NUMBER);
+        searchSteps.searchFromTop(Constants.ONE_NUMBER);
+        searchSteps.verifySearchMessage(Constants.ONE_NUMBER);
     }
 
     @Test

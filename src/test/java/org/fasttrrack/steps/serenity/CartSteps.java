@@ -98,7 +98,7 @@ public class CartSteps extends ScenarioSteps {
     public void verifyCartPageLoggedIn() {
         homePage.open();
         homePage.clickOnMyAccount();
-        myAccountPage.doLogin(Constants.USER_EMAIL, Constants.USER_PASSWORD);
+        myAccountPage.doLogin(Constants.ROBERT_EMAIL, Constants.ROBERT_PASSWORD);
         homePage.clickOnCart();
         cartPage.verifyCartLoggedIn();
     }

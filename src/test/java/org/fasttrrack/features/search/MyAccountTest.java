@@ -33,7 +33,7 @@ public class MyAccountTest extends BaseTest{
     @Test
     public void verifyCartAfterLogout(){
         homePageSteps.openHomePage();
-        loginSteps.doLogIn(Constants.USER_EMAIL , Constants.USER_PASSWORD);
+        loginSteps.doLogIn(Constants.ROBERT_EMAIL, Constants.ROBERT_PASSWORD);
         homePageSteps.clickOnCart();
         myAccountSteps.doLogout();
         homePageSteps.clickOnCart();
@@ -44,7 +44,7 @@ public class MyAccountTest extends BaseTest{
     public void logout(){
         homePageSteps.openHomePage();
         loginSteps.navigateToLogIn();
-        loginSteps.doLogIn(Constants.USER_EMAIL , Constants.USER_PASSWORD);
+        loginSteps.doLogIn(Constants.ROBERT_EMAIL, Constants.ROBERT_PASSWORD);
         myAccountSteps.doLogout();
     }
 }

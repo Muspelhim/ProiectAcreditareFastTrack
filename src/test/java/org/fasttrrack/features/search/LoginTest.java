@@ -8,7 +8,11 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void loggIn(){
-        loginSteps.doLogIn(Constants.USER_EMAIL,Constants.USER_PASSWORD);
+        loginSteps.doLogIn(Constants.ROBERT_EMAIL,Constants.ROBERT_PASSWORD);
+    }
+    @Test
+    public void loggIn2(){
+        loginSteps.doLogIn("trebuie sa scrii emailul tau","si parola ta");
     }
 
     @Test
@@ -23,7 +27,7 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void loginWithOneLetterAndOneNumber(){
-        loginSteps.doLogIn("a" , "1");
+        loginSteps.doLogIn(Constants.ONE_LETTER , Constants.ONE_NUMBER);
     }
 
     @Test
