@@ -51,7 +51,7 @@ public class AdminTest extends BaseTest {
     closeDriver();
     adminSteps.doAdminLogin();
     adminSteps.accessTheComments();
-    adminSteps.approveTheCommentFromTheCommentsList();
+    adminSteps.approveTheComment();
   }
 
 

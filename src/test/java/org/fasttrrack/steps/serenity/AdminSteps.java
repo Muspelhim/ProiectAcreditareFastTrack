@@ -86,11 +86,11 @@ public class AdminSteps extends ScenarioSteps {
     }
 
     @Step
-    public void approveTheCommentFromTheCommentsList(){
-        adminPage.goToFirstComment();
-//        waitABit(300);
-        adminPage.approveFromCommentsHover();
-//        waitABit(300);
+    public void approveTheComment(){
+        adminPage.selectUnapprovedComment();
+        adminPage.selectActionFromDropdownComments();
+        adminPage.applyTheCommentsAction();
+
     }
 
     @Step

@@ -104,8 +104,9 @@ public class CartSteps extends ScenarioSteps {
     }
 
     @Step
-    public void comparePrices() {
-//        cartPage.getIntFromPrice("lei6.00" , "lei924.00");
+    public void removeAnItem(){
+        cartPage.clickOnRemoveItemCart();
+        cartPage.removeItemMessage();
     }
 
     @Step

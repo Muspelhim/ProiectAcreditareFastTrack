@@ -46,4 +46,11 @@ public class CartTest extends  BaseTest{
         cartSteps.clickOnUpdateCart();
         cartSteps.verifyCartUpdateMessage();
     }
+    @Test
+    public void removeItem(){
+        cartSteps.addToCartHoodie("Hoodie with Logo");
+        homePageSteps.clickOnCart();
+        cartSteps.removeAnItem();
+
+    }
 }

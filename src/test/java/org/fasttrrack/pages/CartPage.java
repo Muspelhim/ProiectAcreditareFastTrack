@@ -2,9 +2,8 @@ package org.fasttrrack.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.pages.PageObject;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.fasttrrack.utils.Constants;
+
 
 import java.util.List;
 public class CartPage extends BasePage  {
@@ -52,6 +51,23 @@ public class CartPage extends BasePage  {
 
     @FindBy (css = ".woocommerce-message")
     private WebElementFacade cartUpdateMessage;
+
+    @FindBy(css = ".product-remove a")
+    private WebElementFacade removeItemFromCart;
+
+    @FindBy (css = ".woocommerce-message")
+    private WebElementFacade cartRemoveMessage;
+
+    @FindBy(css = "td.product-name")
+    private WebElementFacade productTitle;
+
+    public void removeItemMessage(){
+        String product=productTitle.getText();
+        cartRemoveMessage.shouldContainOnlyText("“"+product+"” removed. Undo?");
+    }
+    public void clickOnRemoveItemCart(){
+        clickOn(removeItemFromCart);
+    }
 
 
     public void updateCartMessage(){

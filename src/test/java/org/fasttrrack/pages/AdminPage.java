@@ -29,23 +29,19 @@ public class AdminPage extends PageObject {
     @FindBy (css = "div.wp-menu-image.dashicons-before.dashicons-admin-comments")
     private WebElementFacade goToComments;
 
-    @FindBy (css = "#comment-733 > div > p.row-actions > span.approve > a")
-    private WebElementFacade approveComment;
-
-    @FindBy (css = "#comment-733 > div > blockquote > p")
-    private WebElementFacade verifyComment;
-
     @FindBy(id = "the-comment-list")
     private List<WebElementFacade>commentList;
 
-    @FindBy(css = "#the-comment-list .even:first-child .row-actions")
-    private WebElementFacade firstComment;
+    @FindBy(css = ".comment.unapproved  .check-column [type=checkbox]")
+    private WebElementFacade unapprovedComments;
 
-    @FindBy (css = "#comment-785 > td.comment.column-comment.has-row-actions.column-primary > div.row-actions > span.approve > a")
-    private WebElementFacade approveCommentFromTheList;
+    @FindBy (id = "bulk-action-selector-top")
+    private WebElementFacade commentsAction;
+
+    @FindBy (id = "doaction")
+    private WebElementFacade actionOfTheComment;
 
     @FindBy (css = ".menu-icon-product .wp-menu-name")
-//    #menu-posts-product > a > div.wp-menu-image.dashicons-before.dashicons-admin-post (acesta era inainte si l-am facut mai mic)
     private WebElementFacade pressProducts;
 
     @FindBy (css = "#wpbody-content > div.wrap > a:nth-child(2)")
@@ -139,15 +135,16 @@ public class AdminPage extends PageObject {
     public void accessComments(){
         goToComments.click();
     }
-    public void goToFirstComment(){
-        withAction().moveToElement(firstComment);
 
+    public void selectUnapprovedComment(){
+        clickOn(unapprovedComments);
     }
-    public void approveFromCommentsHover(){
-        withAction().moveToElement(approveCommentFromTheList).click();
-
+    public void selectActionFromDropdownComments(){
+        selectFromDropdown(commentsAction,"Approve");
     }
-
+    public void applyTheCommentsAction(){
+        clickOn(actionOfTheComment);
+    }
     public void selectUserOrder(String userName){
         userName= Constants.USER_NAME;
         for (WebElementFacade element : ordersList) {
