@@ -8,9 +8,9 @@ public class Constants {
 
     public static final String ROBERT_PASSWORD = "!Q2w3e4r5t6y";
 
-    public static final String RAZVAN_EMAIL = "BAGA AICI CE TREBE";
+    public static final String RAZVAN_EMAIL = "bustiucr@gmail.com";
 
-    public static final String RAZVAN_PASSWORD = "SI PE URMA FOLOSESTELE LA TESTELE PE CARE LE-AI SCRIS TU CU LOGGINUL TAU";
+    public static final String RAZVAN_PASSWORD = "password1";
 
     public static final String ONE_LETTER = RandomStringUtils.randomAlphabetic(1);
 
